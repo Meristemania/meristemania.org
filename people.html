@@ -200,7 +200,7 @@
   <section class="roster">
 
     <div class="roster-group">
-      <h3>Alumni</h3>
+      <h3>Alumni <span class="alumni-stats" aria-label="Alumni by final role since 2002">since 2002: <b data-stat="postdoc">0</b> postdocs &middot; <b data-stat="phd">0</b> PhD students &middot; <b data-stat="msc">0</b> master students</span></h3>
       <div class="people-grid">
         
         
@@ -211,7 +211,9 @@
         <article class="person"><div class="name">Sabine Büchel</div><div class="role">Master student</div><div class="focus">PhD student, ETH Zurich</div></article>
         <article class="person"><div class="name">Dr. Wolfgang Busch</div><div class="role">PhD student</div><div class="focus">Full Professor, The Salk Institute for Biological Studies</div></article>
         <article class="person"><div class="name">Dr. Gabor Daum</div><div class="role">PhD student · Postdoc</div><div class="focus">Team Leader, Abbott, Darmstadt</div></article>
+        <article class="person"><div class="name">Monika Demar</div><div class="role">Technician</div><div class="focus">Technician, Max Planck Institute for Biology</div></article>
         <article class="person"><div class="name">Hannah Dierks</div><div class="role">Master student</div><div class="focus">PhD student, MPI for Plant Breeding Research, Cologne</div></article>
+        <article class="person"><div class="name">Dr. Shijuan Dou</div><div class="role">Visiting professor</div></article>
         <article class="person"><div class="name">Olga Ermakova</div><div class="role">Bioinformatics service</div><div class="focus">PhD student, DKFZ, Heidelberg</div></article>
         <article class="person"><div class="name">Dr. Joachim Forner</div><div class="role">Postdoc</div><div class="focus">Staff Scientist, MPI for Molecular Plant Physiology, Golm</div></article>
         <article class="person"><div class="name">Dr. Michael Fuchs</div><div class="role">PhD student</div><div class="focus">Postdoc MPI for Plant Breeding Research, Cologne</div></article>
@@ -244,9 +246,11 @@
         <article class="person"><div class="name">Zoran Sutikovic</div><div class="role">PhD student</div><div class="focus">Senior Research Engineer, Zimmer Biomet, Switzerland</div></article>
         <article class="person"><div class="name">Dr. Takuya Suzaki</div><div class="role">Postdoc</div><div class="focus">Full Professor, Tsukuba-Plant Innovation Research Center, University of Tsukuba, Japan</div></article>
         <article class="person"><div class="name">Gözde Utan</div><div class="role">Master student</div><div class="focus">Medical student, Pavia University, Italy</div></article>
+        <article class="person"><div class="name">Josep Vilarrasa-Blasi</div><div class="role">Visiting PhD student</div></article>
         <article class="person"><div class="name">Jeannette Walsch</div><div class="role">Administrative manager, SFB 873</div><div class="focus">Administration and Projects, IWR, Heidelberg University</div></article>
         <article class="person"><div class="name">Christiane Wickenhöfer</div><div class="role">Scientific manager, SFB 873</div><div class="focus">Administrative manager, Field of Focus 2, Heidelberg University</div></article>
         <article class="person"><div class="name">Dr. Zhong Zhao</div><div class="role">Postdoc</div><div class="focus">Full Professor, University of Science and Technology of China, Hefei</div></article>
+        <article class="person"><div class="name">Yufeng Zhou</div><div class="role">Visiting PhD student</div></article>
       
       
       
@@ -309,5 +313,33 @@
   </footer>
 
   <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>
+    /* Alumni counters — auto-tally final-role categories from the rendered cards. */
+    (function () {
+      var group = document.querySelector('.roster-group h3 .alumni-stats');
+      if (!group) return;
+      var cards = document.querySelectorAll('.roster-group .people-grid .person');
+      // Restrict to the Alumni group: take cards whose parent's preceding h3 reads "Alumni".
+      var counts = { postdoc: 0, phd: 0, msc: 0 };
+      document.querySelectorAll('.roster-group').forEach(function (g) {
+        var h = g.querySelector('h3');
+        if (!h || !/^\s*Alumni\b/i.test(h.textContent)) return;
+        g.querySelectorAll('.person .role').forEach(function (r) {
+          var t = r.textContent.toLowerCase();
+          if (/visiting/.test(t)) return; // visiting researchers are a separate category
+          if (/postdoc/.test(t)) counts.postdoc++;
+          if (/phd student/.test(t)) counts.phd++;
+          if (/master student/.test(t)) counts.msc++;
+        });
+      });
+      var set = function (k, v) {
+        var el = group.querySelector('[data-stat="' + k + '"]');
+        if (el) el.textContent = v;
+      };
+      set('postdoc', counts.postdoc);
+      set('phd', counts.phd);
+      set('msc', counts.msc);
+    })();
+  </script>
 </body>
 </html>
