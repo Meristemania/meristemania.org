@@ -312,5 +312,25 @@ footer li a:hover{color:var(--ink)}
   .pub .venue{text-align:left}
   .people-grid{grid-template-columns:1fr}
 }
+/* ---------- phones: captions below images, tighter spacing ---------- */
+@media(max-width:600px){
+  /* strip figures (index / research): caption drops below the image */
+  .strip{background:transparent;overflow:visible;border-radius:0}
+  .strip img{border-radius:12px}
+  .strip figcaption{position:static;background:none;color:var(--muted3);
+    padding:12px 2px 0;font-size:.74rem;line-height:1.6}
+  /* dark hero image (publications): caption below, light text on the band */
+  .hero-fig figcaption{position:static;background:none;border-radius:0;
+    color:rgba(245,242,234,.8);padding:12px 2px 0;font-size:.72rem}
+  /* wide framed figure caption already sits below — just tighten */
+  .figure-wide figure{padding:12px}
+  /* tighter heroes + hero stats on small screens */
+  .hero{padding:100px 0 48px}
+  .hero.compact{padding:100px 0 40px}
+  .hero-stats{gap:24px}
+  .hero-stats .v{font-size:1.6rem}
+  .brand-lockup .wm{font-size:1.05rem}
+  .section{padding:44px 0 8px}
+}
 @media(max-width:480px){.foot-in{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}.btn:hover,.cardx:hover,.route:hover{transform:none}}
