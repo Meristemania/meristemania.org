@@ -5,63 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>People &mdash; Lohmann Lab &middot; Meristemania</title>
   <meta name="description" content="The people of the Lohmann Lab at the Centre for Organismal Studies, Heidelberg University." />
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/meristemania-app-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=11">
 </head>
 <body>
-
-  <!-- ============== TOP BAR ============== -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
-      <nav class="primary" id="primary-nav" aria-label="Primary">
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" class="brand-lockup" aria-label="Meristemania home"><img class="brand-mark" src="assets/brand/meristemania-mark.svg" alt=""><span class="wm">Meristem<span class="suf">ania</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
+      <nav class="primary" id="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="people.html" class="current">People</a>
         <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
         <a href="join.html">Join us</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============== MASTHEAD ============== -->
-  <section class="masthead">
-    <div>
-      <div class="eyebrow reveal reveal-1">The lab</div>
-      <h1 class="title reveal reveal-2">
-        People who do <em>the work</em>.
-      </h1>
-      <p class="lede reveal reveal-3">
-        A small, international team &mdash; postdocs, doctoral and master&rsquo;s students, scientific and technical staff &mdash; working at the bench, the microscope, and the keyboard.
-      </p>
+  <section class="hero compact">
+    <div class="hero-in single">
+      <div>
+        <div class="eyebrow">The lab</div>
+        <h1 class="head">People who do <em>the work</em>.</h1>
+        <p class="lede">A small, international team — postdocs, doctoral and master&rsquo;s students, scientific and technical staff — working at the bench, the microscope, and the keyboard.</p>
+      </div>
     </div>
   </section>
 
-  <!-- ============== PI BLOCK ============== -->
   <section class="pi">
-    <figure class="pi-photo" style="margin:0;">
-      <img src="assets/img/jl-portrait.jpg"
-           alt="Portrait of Jan U. Lohmann, head of the Stem Cell Biology department at COS Heidelberg." />
+    <figure class="pi-photo">
+      <img src="assets/img/jl-portrait.jpg" alt="Portrait of Jan U. Lohmann, head of the Stem Cell Biology department at COS Heidelberg." />
     </figure>
     <div>
-      <div class="eyebrow">Group leader</div>
+      <div class="eyebrow" style="color:var(--muted3)">Group leader</div>
       <h2>Prof. Dr. Jan U. Lohmann</h2>
-      <div class="pi-role">Full professor &middot; Head of department, Stem Cell Biology</div>
-      <p>
-        Jan has always been fascinated by how cells take decisions &mdash; how they know what to do, when, and where &mdash; to build complex organisms.
-      </p>
-      <p>
-        After studying biology at LMU Munich, a Ph.D. between Munich and Jena, and a postdoctoral fellowship at the Salk Institute, he led an independent group at the Max Planck Institute for Developmental Biology in T&uuml;bingen. He is now full professor and head of the Department of Stem Cell Biology at the Centre for Organismal Studies, Heidelberg University, and Dean of the Faculty of Biosciences.
-      </p>
-      <p>
-        His research has been recognised by the Lautenschl&auml;ger Research Prize, an ERC Synergy Grant, an ERC Starting Grant, election to EMBO, the President&rsquo;s Medal of the Society for Experimental Biology, the EMBO Young Investigator Award, and an HFSP Career Development Award.
-      </p>
+      <div class="pi-role">Full professor · Head of department, Stem Cell Biology</div>
+      <p>Jan has always been fascinated by how cells take decisions — how they know what to do, when, and where — to build complex organisms.</p>
+      <p>After studying biology at LMU Munich, a Ph.D. between Munich and Jena, and a postdoctoral fellowship at the Salk Institute, he led an independent group at the Max Planck Institute for Developmental Biology in Tübingen. He is now full professor and head of the Department of Stem Cell Biology at the Centre for Organismal Studies, Heidelberg University, and Dean of the Faculty of Biosciences.</p>
+      <p>His research has been recognised by the Lautenschläger Research Prize, an ERC Synergy Grant, an ERC Starting Grant, election to EMBO, the President&rsquo;s Medal of the Society for Experimental Biology, the EMBO Young Investigator Award, and an HFSP Career Development Award.</p>
       <div class="pi-links">
         <a href="mailto:jan.lohmann@cos.uni-heidelberg.de">jan.lohmann@cos.uni-heidelberg.de</a>
         <a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID 0000-0003-3667-187X</a>
@@ -71,142 +58,65 @@
     </div>
   </section>
 
-  <!-- ============== ROSTER ============== -->
   <section class="roster">
-
     <div class="roster-group">
       <h3>Staff scientists</h3>
       <div class="people-grid">
-        <article class="person">
-          <div class="name">Dr. Christian Wenzl</div>
-          <div class="role">Staff scientist</div>
-          <a class="mail" href="mailto:christian.wenzl@cos.uni-heidelberg.de">christian.wenzl@cos.uni-heidelberg.de</a>
-        </article>
+        <article class="person"><div class="name">Dr. Christian Wenzl</div><div class="role">Staff scientist</div><a class="mail" href="mailto:christian.wenzl@cos.uni-heidelberg.de">christian.wenzl@cos.uni-heidelberg.de</a></article>
       </div>
     </div>
 
     <div class="roster-group">
       <h3>Postdocs</h3>
       <div class="people-grid">
-        <article class="person">
-          <div class="name">Dr. Julia Baulies</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:julia.baulies@cos.uni-heidelberg.de" title="julia.baulies@cos.uni-heidelberg.de">julia.baulies@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Dr. Pengfei Fan</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:pengfei.fan@cos.uni-heidelberg.de" title="pengfei.fan@cos.uni-heidelberg.de">pengfei.fan@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Dr. Sebastian Gornik</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:sebastian.gornik@cos.uni-heidelberg.de">sebastian.gornik@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Dr. Sharmila Singh</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:sharmila.singh@cos.uni-heidelberg.de">sharmila.singh@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Dr. Delyan Zafirov</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:delyan.zafirov@cos.uni-heidelberg.de" title="delyan.zafirov@cos.uni-heidelberg.de">delyan.zafirov@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Dr. Xinai Zhao</div>
-          <div class="role">Postdoc</div>
-          <a class="mail" href="mailto:xinai.zhao@cos.uni-heidelberg.de">xinai.zhao@cos.uni-heidelberg.de</a>
-        </article>
+        <article class="person"><div class="name">Dr. Julia Baulies</div><div class="role">Postdoc</div><a class="mail" href="mailto:julia.baulies@cos.uni-heidelberg.de">julia.baulies@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Dr. Pengfei Fan</div><div class="role">Postdoc</div><a class="mail" href="mailto:pengfei.fan@cos.uni-heidelberg.de">pengfei.fan@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Dr. Sebastian Gornik</div><div class="role">Postdoc</div><a class="mail" href="mailto:sebastian.gornik@cos.uni-heidelberg.de">sebastian.gornik@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Dr. Sharmila Singh</div><div class="role">Postdoc</div><a class="mail" href="mailto:sharmila.singh@cos.uni-heidelberg.de">sharmila.singh@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Dr. Delyan Zafirov</div><div class="role">Postdoc</div><a class="mail" href="mailto:delyan.zafirov@cos.uni-heidelberg.de">delyan.zafirov@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Dr. Xinai Zhao</div><div class="role">Postdoc</div><a class="mail" href="mailto:xinai.zhao@cos.uni-heidelberg.de">xinai.zhao@cos.uni-heidelberg.de</a></article>
       </div>
     </div>
 
     <div class="roster-group">
       <h3>Predocs</h3>
       <div class="people-grid">
-        <article class="person">
-          <div class="name">Panagiotis Boumpas</div>
-          <div class="role">Predoc</div>
-          <a class="mail" href="mailto:panagiotis.boumpas@cos.uni-heidelberg.de">panagiotis.boumpas@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">In&eacute;s Hidalgo Prados</div>
-          <div class="role">Predoc</div>
-          <a class="mail" href="mailto:ines.hidalgo@cos.uni-heidelberg.de">ines.hidalgo@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Yeseul Kim</div>
-          <div class="role">Predoc</div>
-          <a class="mail" href="mailto:yeseul.kim@cos.uni-heidelberg.de">yeseul.kim@cos.uni-heidelberg.de</a>
-        </article>
+        <article class="person"><div class="name">Panagiotis Boumpas</div><div class="role">Predoc</div><a class="mail" href="mailto:panagiotis.boumpas@cos.uni-heidelberg.de">panagiotis.boumpas@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Inés Hidalgo Prados</div><div class="role">Predoc</div><a class="mail" href="mailto:ines.hidalgo@cos.uni-heidelberg.de">ines.hidalgo@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Yeseul Kim</div><div class="role">Predoc</div><a class="mail" href="mailto:yeseul.kim@cos.uni-heidelberg.de">yeseul.kim@cos.uni-heidelberg.de</a></article>
       </div>
     </div>
 
     <div class="roster-group">
       <h3>Master students</h3>
       <div class="people-grid">
-        <article class="person">
-          <div class="name">Annika Ohl</div>
-          <div class="role">Master student</div>
-          <a class="mail" href="mailto:A.Ohl@stud.uni-heidelberg.de" title="A.Ohl@stud.uni-heidelberg.de">A.Ohl@stud.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Valentin Rebernig</div>
-          <div class="role">Master student</div>
-          <a class="mail" href="mailto:valentin.rebernig@stud.uni-heidelberg.de" title="valentin.rebernig@stud.uni-heidelberg.de">valentin.rebernig@stud.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Xenia Sirodzha</div>
-          <div class="role">Master student</div>
-          <a class="mail" href="mailto:xenia.sirodzha@stud.uni-heidelberg.de" title="xenia.sirodzha@stud.uni-heidelberg.de">xenia.sirodzha@stud.uni-heidelberg.de</a>
-        </article>
+        <article class="person"><div class="name">Annika Ohl</div><div class="role">Master student</div><a class="mail" href="mailto:A.Ohl@stud.uni-heidelberg.de">A.Ohl@stud.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Valentin Rebernig</div><div class="role">Master student</div><a class="mail" href="mailto:valentin.rebernig@stud.uni-heidelberg.de">valentin.rebernig@stud.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Xenia Sirodzha</div><div class="role">Master student</div><a class="mail" href="mailto:xenia.sirodzha@stud.uni-heidelberg.de">xenia.sirodzha@stud.uni-heidelberg.de</a></article>
       </div>
     </div>
 
     <div class="roster-group">
       <h3>Technical &amp; administrative staff</h3>
       <div class="people-grid">
-        <article class="person">
-          <div class="name">Lotte Bald</div>
-          <div class="role">Technical staff</div>
-          <a class="mail" href="mailto:lotte.bald@cos.uni-heidelberg.de" title="lotte.bald@cos.uni-heidelberg.de">lotte.bald@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Christina Godel</div>
-          <div class="role">Administration</div>
-          <a class="mail" href="mailto:christina.godel@cos.uni-heidelberg.de" title="christina.godel@cos.uni-heidelberg.de">christina.godel@cos.uni-heidelberg.de</a>
-        </article>
-        <article class="person">
-          <div class="name">Katja Piiper</div>
-          <div class="role">Technical staff</div>
-          <a class="mail" href="mailto:katja.piiper@cos.uni-heidelberg.de" title="katja.piiper@cos.uni-heidelberg.de">katja.piiper@cos.uni-heidelberg.de</a>
-        </article>
+        <article class="person"><div class="name">Lotte Bald</div><div class="role">Technical staff</div><a class="mail" href="mailto:lotte.bald@cos.uni-heidelberg.de">lotte.bald@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Christina Godel</div><div class="role">Administration</div><a class="mail" href="mailto:christina.godel@cos.uni-heidelberg.de">christina.godel@cos.uni-heidelberg.de</a></article>
+        <article class="person"><div class="name">Katja Piiper</div><div class="role">Technical staff</div><a class="mail" href="mailto:katja.piiper@cos.uni-heidelberg.de">katja.piiper@cos.uni-heidelberg.de</a></article>
       </div>
     </div>
-
   </section>
 
-  <!-- ============== LAB PHOTO ============== -->
   <section class="figure-wide">
     <figure>
-      <img src="assets/img/lab-photo.jpg"
-           alt="Group photograph of the Lohmann lab in front of the Centre for Organismal Studies, Heidelberg." />
-      <figcaption>
-        The Meristemania team &mdash; Centre for Organismal Studies, Heidelberg University.
-      </figcaption>
+      <img src="assets/img/lab-photo.jpg" alt="Group photograph of the Lohmann lab in front of the Centre for Organismal Studies, Heidelberg." />
+      <figcaption>The Meristemania team — Centre for Organismal Studies, Heidelberg University.</figcaption>
     </figure>
   </section>
 
   <section class="roster">
-
     <div class="roster-group">
-      <h3>Alumni <span class="alumni-stats" aria-label="Alumni by final role since 2002">since 2002: <b data-stat="postdoc">0</b> postdocs &middot; <b data-stat="phd">0</b> PhD students &middot; <b data-stat="msc">0</b> master students</span></h3>
+      <h3>Alumni <span class="alumni-stats" aria-label="Alumni by final role since 2002">since 2002: <b data-stat="postdoc">0</b> postdocs · <b data-stat="phd">0</b> PhD students · <b data-stat="msc">0</b> master students</span></h3>
       <div class="people-grid">
-        
-        
-        
-        
-        
         <article class="person"><div class="name">Dr. Stig U. Andersen</div><div class="role">Postdoc</div><div class="focus">Professor of Molecular Genetics of Plants, Aarhus University</div></article>
         <article class="person"><div class="name">Sabine Büchel</div><div class="role">Master student</div><div class="focus">PhD student, ETH Zurich</div></article>
         <article class="person"><div class="name">Dr. Wolfgang Busch</div><div class="role">PhD student</div><div class="focus">Full Professor, The Salk Institute for Biological Studies</div></article>
@@ -254,94 +164,52 @@
         <article class="person"><div class="name">Dr. Jian Zeng</div><div class="role">Postdoc</div><div class="focus">Full Professor, College of Plant Science, Jilin University, China</div></article>
         <article class="person"><div class="name">Dr. Zhong Zhao</div><div class="role">Postdoc</div><div class="focus">Full Professor, University of Science and Technology of China, Hefei, China</div></article>
         <article class="person"><div class="name">Yufeng Zhou</div><div class="role">Visiting PhD student</div></article>
-      
-      
-      
-      
-      
       </div>
     </div>
-
   </section>
 
-  <!-- ============== ALUMNI HINT ============== -->
   <section class="cta">
-    <div class="cta-inner">
+    <div class="cta-in">
       <h2>Want to add yourself? <em>Or update your line?</em></h2>
-      <a class="btn" href="mailto:jan.lohmann@cos.uni-heidelberg.de?subject=People%20page%20update">Email Jan &rarr;</a>
+      <a class="btn solid" href="mailto:jan.lohmann@cos.uni-heidelberg.de?subject=People%20page%20update">Email Jan →</a>
     </div>
   </section>
 
-  <!-- ============== FOOTER ============== -->
   <footer>
-    <div class="footer-inner">
-      <div class="brand-block">
-        <span class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></span>
-        <p>Plant stem cell biology &middot; Centre for Organismal Studies (COS), Heidelberg University &middot; part of the <a href="https://greenrobust.de" style="color:inherit;" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence &mdash; <em>Understanding Robustness in Plants from Molecules to Ecosystems</em>. Funded by DFG, ERC, and others.</p>
-      </div>
+    <div class="foot-in">
       <div>
-        <h4>Lab</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="join.html">Join us</a></li>
-        </ul>
+        <span class="wm">Meristem<span class="suf">ania</span></span>
+        <p>Stem cell biology · Centre for Organismal Studies (COS), Heidelberg University<br>Part of the <a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence — <em>Understanding Robustness in Plants from Molecules to Ecosystems</em><br>Funded by DFG, ERC, and others.</p>
       </div>
-      <div>
-        <h4>Institutional</h4>
-        <ul>
-          <li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li>
-          <li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li>
-          <li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li>
-          <li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li>
-          <li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li>
-          <li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><h4>Lab</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li><li><a href="news.html">News</a></li><li><a href="join.html">Join us</a></li></ul></div>
+      <div><h4>Institutional</h4><ul><li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li><li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li><li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li><li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li><li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li><li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-legal">
-      <span>&copy; <span id="yr">2026</span> Lohmann Lab &middot; Meristemania</span>
-      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> &middot; <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> &middot; <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Lohmann Lab · Meristemania</span>
+      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> · <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> · <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
     </div>
   </footer>
 
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
   <script>
-    /* Alumni counters — auto-tally final-role categories from the rendered cards. */
     (function () {
       var group = document.querySelector('.roster-group h3 .alumni-stats');
       if (!group) return;
-      var cards = document.querySelectorAll('.roster-group .people-grid .person');
-      // Restrict to the Alumni group: take cards whose parent's preceding h3 reads "Alumni".
       var counts = { postdoc: 0, phd: 0, msc: 0 };
       document.querySelectorAll('.roster-group').forEach(function (g) {
         var h = g.querySelector('h3');
         if (!h || !/^\s*Alumni\b/i.test(h.textContent)) return;
         g.querySelectorAll('.person .role').forEach(function (r) {
           var t = r.textContent.toLowerCase();
-          if (/visiting/.test(t)) return; // visiting researchers are a separate category
+          if (/visiting/.test(t)) return;
           if (/postdoc/.test(t)) counts.postdoc++;
           if (/phd student/.test(t)) counts.phd++;
           if (/master student/.test(t)) counts.msc++;
         });
       });
-      var set = function (k, v) {
-        var el = group.querySelector('[data-stat="' + k + '"]');
-        if (el) el.textContent = v;
-      };
-      set('postdoc', counts.postdoc);
-      set('phd', counts.phd);
-      set('msc', counts.msc);
+      var set = function (k, v) { var el = group.querySelector('[data-stat="' + k + '"]'); if (el) el.textContent = v; };
+      set('postdoc', counts.postdoc); set('phd', counts.phd); set('msc', counts.msc);
     })();
   </script>
 </body>

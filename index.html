@@ -3,245 +3,125 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meristemania &middot; Lohmann Lab &mdash; Plant stem cell biology, Heidelberg</title>
+  <title>Meristemania &middot; Lohmann Lab &mdash; Stem Cell Biology, Heidelberg</title>
   <meta name="description" content="Meristemania is the laboratory of Jan U. Lohmann at the Centre for Organismal Studies, Heidelberg University. We work out how plant stem cells are specified, maintained, and tuned in space, time, and changing environments, using Arabidopsis thaliana as a reference system. Part of the GreenRobust Cluster of Excellence." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Meristemania &middot; Lohmann Lab" />
   <meta property="og:description" content="Plant stem cell biology in the shoot apical meristem. Centre for Organismal Studies (COS), Heidelberg University &middot; GreenRobust Cluster of Excellence." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.meristemania.org/" />
   <meta property="og:image" content="https://www.meristemania.org/assets/img/daum-cover.jpg" />
 
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/meristemania-app-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=11">
 </head>
 <body>
-
-  <!-- ============== TOP BAR ============== -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
-      <nav class="primary" id="primary-nav" aria-label="Primary">
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" class="brand-lockup" aria-label="Meristemania home"><img class="brand-mark" src="assets/brand/meristemania-mark.svg" alt=""><span class="wm">Meristem<span class="suf">ania</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
+      <nav class="primary" id="nav" aria-label="Primary">
         <a href="index.html" class="current">Home</a>
         <a href="research.html">Research</a>
         <a href="people.html">People</a>
         <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
         <a href="join.html">Join us</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============== HERO ============== -->
   <section class="hero">
-    <div>
-      <div class="eyebrow reveal reveal-1">Stem cell biology &mdash; Heidelberg University</div>
-      <h1 class="title reveal reveal-2">
-        Stem cells,<br/>
-        <em>continuously</em> &mdash;<br/>
-        for a plant&rsquo;s entire life.
-      </h1>
-      <p class="lede reveal reveal-3">
-        We work out how a small, self-organising niche of cells at the shoot apex specifies, maintains, and tunes the stem cell population that builds every leaf, stem and flower a plant will ever make &mdash; and how it does so across days, seasons, and generations.
-      </p>
-      <div class="reveal reveal-4" style="margin-top: 2rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
-        <a class="btn dark" href="research.html">Our research &rarr;</a>
-        <a class="btn dark" href="publications.html">Publications</a>
-        <a class="btn dark" href="join.html">Join us</a>
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow">Stem Cell Biology — Heidelberg University</div>
+        <h1 class="head">Stem cells,<br><em>continuously</em> —<br>for a plant&rsquo;s entire life.</h1>
+        <p class="lede">We work out how a small, self-organising niche of cells at the shoot apex specifies, maintains, and tunes the stem cell population that builds every leaf, stem and flower a plant will ever make — and how it does so across days, seasons, and generations.</p>
       </div>
-    </div>
-    <div class="reveal reveal-5">
-      <div class="hero-image">
-        <img src="assets/img/daum-cover.jpg"
-             alt="Stem cell reporter in an inflorescence meristem of Arabidopsis." />
-      </div>
-      <p style="font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; color: var(--ink-soft); margin: 0.7rem 0 0;">
-        Stem cell reporter in an inflorescence meristem of <em>Arabidopsis</em>.
-      </p>
-    </div>
-  </section>
-
-  <!-- ============== FOUR PILLARS ============== -->
-  <section class="section" style="padding-top: 3rem;">
-    <div class="section-head">
-      <h2>What we work on</h2>
-      <span class="counter"><a href="research.html" style="color:inherit; border-bottom: 1px solid var(--green-mid); padding-bottom: 2px;">Full programme &rarr;</a></span>
-    </div>
-    <div class="pillars">
-      <div class="pillar">
-        <div class="pn">01 &mdash; transcriptional core</div>
-        <h3><em>WUSCHEL</em> &amp; the architecture of the stem cell niche</h3>
-        <p>Cell-type-resolved targets, cofactors and chromatin states of WUS &mdash; and how one short-range signal sustains a population of cells across decades of growth.</p>
-      </div>
-      <div class="pillar">
-        <div class="pn">02 &mdash; context-dependent networks</div>
-        <h3>Decoding <em>context-dependent</em> genetic networks <em>in vivo</em></h3>
-        <p>Conditional CRISPR perturbations, single-cell transcriptomics and imaging in the <em>Arabidopsis</em> root tip and the <em>Drosophila</em> gut. Part of the ERC Synergy project DECODE.</p>
-      </div>
-      <div class="pillar">
-        <div class="pn">03 &mdash; hormonal integration</div>
-        <h3>Cytokinin, auxin and the <em>whole-plant</em> conversation</h3>
-        <p>Where cytokinin, auxin and jasmonate intersect the WUS circuit &mdash; including the trade-off between growth and defence in the shoot apex.</p>
-      </div>
-      <div class="pillar">
-        <div class="pn">04 &mdash; environment, growth &amp; regeneration</div>
-        <h3>Sensing the world: <em>acclimation</em>, <em>regeneration</em> and <em>growth</em></h3>
-        <p>How temperature, light and nutrients meet the niche through TOR-kinase signalling, and how the same cues set the limits of regeneration across <em>Marchantia</em>, <em>Arabidopsis</em> and <em>Brachypodium</em>. Part of the GreenRobust Cluster of Excellence.</p>
+      <div class="hero-mark">
+        <img src="assets/brand/meristemania-mark.svg" alt="The Meristemania mark: a domed mosaic of cells with six primordia budding off along the golden angle.">
       </div>
     </div>
   </section>
 
-  <!-- ============== FIGURE / IMAGERY STRIP ============== -->
-  <section class="figure-wide">
-    <figure>
-      <img src="assets/img/dr5.jpg"
-           alt="Confocal optical section through the Arabidopsis shoot apical meristem showing the auxin-response reporter DR5 marking new organ primordia." />
-      <figcaption>
-        Auxin-response reporter (DR5) in the <em>Arabidopsis</em> shoot apical meristem &mdash; marking the foci of new organ initiation around the central stem cell niche.
-      </figcaption>
+  <main class="wrap">
+    <section class="section">
+      <div class="section-head"><h2>What we work on</h2><a href="research.html">Full programme →</a></div>
+      <div class="cards">
+        <article class="cardx">
+          <p class="k">01 — Transcriptional core</p>
+          <h3><em>WUSCHEL</em> &amp; the architecture of the stem cell niche</h3>
+          <p class="q">How does one short-range signal sustain a stem cell population across decades of growth?</p>
+          <p>We investigate cell-type-resolved targets, cofactors and chromatin states of the stem cell&ndash;inducing transcription factor WUS.</p>
+        </article>
+        <article class="cardx">
+          <p class="k">02 — Context-dependent networks</p>
+          <h3>Decoding <em>context-dependent</em> networks <em>in vivo</em></h3>
+          <p class="q">How do genes work together to build complex tissues?</p>
+          <p>We apply conditional CRISPR perturbations, single-cell transcriptomics and imaging in the <em>Arabidopsis</em> root tip and the <em>Drosophila</em> gut, to identify functional genetic networks. Part of ERC Synergy DECODE.</p>
+        </article>
+        <article class="cardx">
+          <p class="k">03 — Hormonal integration</p>
+          <h3>Cytokinin, auxin &amp; the <em>whole-plant</em> conversation</h3>
+          <p class="q">How is stem cell activity integrated into plant development?</p>
+          <p>We elucidate how cytokinin, auxin and jasmonate intersect the WUS stem cell circuit — including the trade-off between growth and defence at the shoot apex.</p>
+        </article>
+        <article class="cardx">
+          <p class="k">04 — Environment, growth &amp; regeneration</p>
+          <h3>Sensing the world: <em>acclimation</em>, <em>regeneration</em> and <em>growth</em></h3>
+          <p class="q">How do temperature, light and nutrients affect stem cells?</p>
+          <p>We study TOR-kinase activity, auxin signalling and cellular gradients, and how the same cues set the limits of regeneration across <em>Marchantia</em>, <em>Arabidopsis</em> and <em>Brachypodium</em>. Part of the GreenRobust Cluster of Excellence.</p>
+        </article>
+      </div>
+    </section>
+
+    <figure class="strip">
+      <img src="assets/img/dr5.jpg" alt="Confocal optical section through the Arabidopsis shoot apical meristem showing the auxin-response reporter DR5 marking new organ primordia.">
+      <figcaption>Auxin-response reporter (DR5) in the <em>Arabidopsis</em> shoot apical meristem marks the foci of organ initiation around the central stem cell niche.</figcaption>
     </figure>
-  </section>
 
-  <!-- ============== SIGNATURE PAPERS ============== -->
-  <section class="papers">
-    <div class="papers-inner">
-      <div class="section-head" style="margin-bottom:2rem;">
-        <h2>Recent &amp; signature work</h2>
-        <span class="counter"><a href="publications.html" style="color:inherit; border-bottom: 1px solid var(--green-mid); padding-bottom: 2px;">All publications &rarr;</a></span>
-      </div>
-      <ol class="papers-list">
-        <li class="paper">
-          <span class="yr">2023</span>
-          <div class="meta">
-            Nitric Oxide controls shoot meristem activity via regulation of DNA methylation.
-            <span class="authors">Zeng J, Zhao X, Liang Z, Hidalgo I, Gebert M, Fan P, Wenzl C, Gornik SG, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature Comm.</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2020</span>
-          <div class="meta">
-            Structural basis for the complex DNA binding behavior of the plant stem cell regulator WUSCHEL.
-            <span class="authors">Sloan J, Hakenjos JP, Gebert M, Gumiero A, Stier G, Wild K, Sinning I, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature Comm.</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2019</span>
-          <div class="meta">
-            WUSCHEL acts as an auxin response rheostat to maintain apical stem cells in <em>Arabidopsis</em>.
-            <span class="authors">Ma Y, Miotk A, Sutikovic Z, <em>et al.</em>, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature Comm.</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2016</span>
-          <div class="meta">
-            Integration of light and metabolic signals for stem cell activation at the shoot apical meristem.
-            <span class="authors">Pfeiffer A, Janocha D, Dong Y, <em>et al.</em>, Hell R, Lohmann JU</span>
-          </div>
-          <span class="venue">eLife</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2014</span>
-          <div class="meta">
-            A mechanistic framework of non-cell autonomous stem cell induction in <em>Arabidopsis</em>.
-            <span class="authors">Daum G, Medzihradszky A, Suzaki T, Lohmann JU</span>
-          </div>
-          <span class="venue">PNAS</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2010</span>
-          <div class="meta">
-            Hormonal control of the shoot stem cell niche.
-            <span class="authors">Zhao Z, Andersen SU, Ljung K, Dolezal K, Miotk A, Schultheiss SJ, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2005</span>
-          <div class="meta">
-            A gene expression map of <em>Arabidopsis thaliana</em> development.
-            <span class="authors">Schmid M, Davison TS, Henz SR, Pape UJ, Demar M, Vingron M, Sch&ouml;lkopf B, Weigel D, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature Genetics</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2005</span>
-          <div class="meta">
-            WUSCHEL controls meristem function by direct regulation of cytokinin-inducible response regulators.
-            <span class="authors">Leibfried A, To JPC, Stehling S, Busch W, Kehle A, Demar M, Kieber JJ, Lohmann JU</span>
-          </div>
-          <span class="venue">Nature</span>
-        </li>
-        <li class="paper">
-          <span class="yr">2001</span>
-          <div class="meta">
-            A molecular link between stem cell regulation and floral patterning in <em>Arabidopsis</em>.
-            <span class="authors">Lohmann JU, Hong R, Hobe M, Busch MA, Parcy F, Simon R, Weigel D</span>
-          </div>
-          <span class="venue">Cell</span>
-        </li>
+    <section class="section">
+      <div class="section-head"><h2>Recent &amp; signature work</h2><a href="publications.html">All publications →</a></div>
+      <ol class="plist">
+        <li><span class="yr">2023</span><span class="t">Nitric Oxide controls shoot meristem activity via regulation of DNA methylation.<span class="au">Zeng J, Zhao X, Liang Z, Hidalgo I, Gebert M, Fan P, Wenzl C, Gornik SG, Lohmann JU</span></span><span class="v">Nature Comm.</span></li>
+        <li><span class="yr">2020</span><span class="t">Structural basis for the complex DNA binding behavior of the plant stem cell regulator WUSCHEL.<span class="au">Sloan J, Hakenjos JP, Gebert M, Gumiero A, Stier G, Wild K, Sinning I, Lohmann JU</span></span><span class="v">Nature Comm.</span></li>
+        <li><span class="yr">2019</span><span class="t">WUSCHEL acts as an auxin response rheostat to maintain apical stem cells in <em>Arabidopsis</em>.<span class="au">Ma Y, Miotk A, Sutikovic Z, Ermakova O, Wenzl C, Medzihradsky A, Gaillochet C, Forner J, Utan G, Brackmann K, Galvan-Ampudia CS, Vernoux T, Greb T, Lohmann JU</span></span><span class="v">Nature Comm.</span></li>
+        <li><span class="yr">2016</span><span class="t">Integration of light and metabolic signals for stem cell activation at the shoot apical meristem.<span class="au">Pfeiffer A, Janocha D, Dong Y, Medzihradszky A, Schöne S, Daum G, Suzaki T, Forner J, Langenecker T, Rempel E, Schmid M, Wirtz M, Hell R, Lohmann JU</span></span><span class="v">eLife</span></li>
+        <li><span class="yr">2014</span><span class="t">A mechanistic framework of non-cell autonomous stem cell induction in <em>Arabidopsis</em>.<span class="au">Daum G, Medzihradszky A, Suzaki T, Lohmann JU</span></span><span class="v">PNAS</span></li>
+        <li><span class="yr">2010</span><span class="t">Hormonal control of the shoot stem cell niche.<span class="au">Zhao Z, Andersen SU, Ljung K, Dolezal K, Miotk A, Schultheiss SJ, Lohmann JU</span></span><span class="v">Nature</span></li>
+        <li><span class="yr">2005</span><span class="t">A gene expression map of <em>Arabidopsis thaliana</em> development.<span class="au">Schmid M, Davison TS, Henz SR, Pape UJ, Demar M, Vingron M, Schölkopf B, Weigel D, Lohmann JU</span></span><span class="v">Nature Genetics</span></li>
+        <li><span class="yr">2005</span><span class="t">WUSCHEL controls meristem function by direct regulation of cytokinin-inducible response regulators.<span class="au">Leibfried A, To JPC, Stehling S, Busch W, Kehle A, Demar M, Kieber JJ, Lohmann JU</span></span><span class="v">Nature</span></li>
+        <li><span class="yr">2001</span><span class="t">A molecular link between stem cell regulation and floral patterning in <em>Arabidopsis</em>.<span class="au">Lohmann JU, Hong R, Hobe M, Busch MA, Parcy F, Simon R, Weigel D</span></span><span class="v">Cell</span></li>
       </ol>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ============== CTA ============== -->
   <section class="cta">
-    <div class="cta-inner">
+    <div class="cta-in">
       <h2>Curious about plant stem cells? <em>Come work with us.</em></h2>
-      <a class="btn" href="join.html">Open positions &rarr;</a>
+      <a class="btn solid" href="join.html">Open positions →</a>
     </div>
   </section>
 
-  <!-- ============== FOOTER ============== -->
   <footer>
-    <div class="footer-inner">
-      <div class="brand-block">
-        <span class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></span>
-        <p>Plant stem cell biology &middot; Centre for Organismal Studies (COS), Heidelberg University &middot; part of the <a href="https://greenrobust.de" style="color:inherit;" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence &mdash; <em>Understanding Robustness in Plants from Molecules to Ecosystems</em>. Funded by DFG, ERC, and others.</p>
-      </div>
+    <div class="foot-in">
       <div>
-        <h4>Lab</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="join.html">Join us</a></li>
-        </ul>
+        <span class="wm">Meristem<span class="suf">ania</span></span>
+        <p>Stem cell biology · Centre for Organismal Studies (COS), Heidelberg University<br>Part of the <a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence — <em>Understanding Robustness in Plants from Molecules to Ecosystems</em><br>Funded by DFG, ERC, and others.</p>
       </div>
-      <div>
-        <h4>Institutional</h4>
-        <ul>
-          <li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li>
-          <li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li>
-          <li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li>
-          <li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li>
-          <li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li>
-          <li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><h4>Lab</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li><li><a href="news.html">News</a></li><li><a href="join.html">Join us</a></li></ul></div>
+      <div><h4>Institutional</h4><ul><li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li><li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li><li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li><li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li><li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li><li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-legal">
-      <span>&copy; <span id="yr">2026</span> Lohmann Lab &middot; Meristemania</span>
-      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> &middot; <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> &middot; <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Lohmann Lab · Meristemania</span>
+      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> · <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> · <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
     </div>
   </footer>
-
-  <script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>

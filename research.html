@@ -3,843 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research — Lohmann Lab · Meristemania</title>
+  <title>Research &mdash; Lohmann Lab &middot; Meristemania</title>
   <meta name="description" content="Research in the Lohmann Lab at the Centre for Organismal Studies, Heidelberg University: regulatory networks of plant stem cell control, with a focus on WUSCHEL, chromatin, hormonal integration and environmental adaptation in Arabidopsis." />
-
-  <!-- Typography: Fraunces for display (a contemporary serif with optical sizing), Inter Tight as a workhorse, JetBrains Mono for callouts -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/meristemania-app-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
-
-  <style>
-    /* Page-only overrides intentionally empty — all design tokens live in
-       assets/css/site.css so every page renders identically. The block
-       below is kept so future page-local tweaks have a home. */
-    /*
-    :root {
-      /* Palette: botanical, editorial. Deep meristem green, ink, warm paper. */
-      --paper:        #f4f0e6;
-      --paper-warm:   #ebe5d3;
-      --ink:          #11150f;
-      --ink-soft:     #2a2f25;
-      --rule:         #d9d2bc;
-      --green-deep:   #1f3326;    /* leaf in shadow */
-      --green-mid:    #4a6b3a;    /* young meristem */
-      --green-pale:   #c8d0a4;
-      --magenta:      #b81e5a;    /* WUS reporter accent */
-      --amber:        #c98a1a;    /* cytokinin/auxin accent */
-
-      --serif:  "Fraunces", "EB Garamond", Georgia, serif;
-      --sans:   "Inter Tight", system-ui, sans-serif;
-      --mono:   "JetBrains Mono", ui-monospace, monospace;
-
-      --maxw: 1240px;
-      --gutter: clamp(1.2rem, 3vw, 2.4rem);
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--sans);
-      font-size: 17px;
-      line-height: 1.55;
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-      /* Subtle paper grain */
-      background-image:
-        radial-gradient(rgba(17,21,15,0.025) 1px, transparent 1px),
-        radial-gradient(rgba(17,21,15,0.02) 1px, transparent 1px);
-      background-size: 3px 3px, 7px 7px;
-      background-position: 0 0, 1px 2px;
-    }
-
-    a { color: inherit; }
-
-    /* ------- top bar ------- */
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(244, 240, 230, 0.86);
-      backdrop-filter: saturate(140%) blur(12px);
-      border-bottom: 1px solid var(--rule);
-    }
-    .topbar-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0.9rem var(--gutter);
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    .brand {
-      font-family: var(--serif);
-      font-weight: 500;
-      font-style: italic;
-      font-size: 1.25rem;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-    }
-    .brand b {
-      font-style: normal;
-      font-weight: 600;
-      font-variation-settings: "SOFT" 100;
-    }
-    nav.primary {
-      display: flex;
-      gap: 1.4rem;
-      font-size: 0.86rem;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    nav.primary a {
-      text-decoration: none;
-      color: var(--ink-soft);
-      padding-bottom: 2px;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    nav.primary a:hover { color: var(--ink); border-bottom-color: var(--magenta); }
-    nav.primary a.current { color: var(--ink); border-bottom-color: var(--ink); }
-
-    @media (max-width: 720px) {
-      nav.primary { display: none; }
-    }
-
-    /* ------- masthead ------- */
-    .masthead {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 5rem var(--gutter) 3rem;
-      display: grid;
-      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
-      gap: clamp(1.5rem, 4vw, 4rem);
-      align-items: end;
-    }
-    @media (max-width: 880px) {
-      .masthead { grid-template-columns: 1fr; padding-top: 3rem; }
-    }
-
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--green-mid);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 1.5rem;
-    }
-    .eyebrow::before {
-      content: "";
-      display: inline-block;
-      width: 28px;
-      height: 1px;
-      background: var(--green-mid);
-    }
-
-    h1.title {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 144, "SOFT" 50, "WONK" 1;
-      font-size: clamp(2.8rem, 6.5vw, 5.6rem);
-      line-height: 0.96;
-      letter-spacing: -0.02em;
-      margin: 0 0 1.2rem;
-      color: var(--ink);
-    }
-    h1.title em {
-      font-style: italic;
-      color: var(--green-deep);
-      font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
-    }
-
-    .lede {
-      font-family: var(--serif);
-      font-weight: 300;
-      font-size: clamp(1.15rem, 1.6vw, 1.4rem);
-      line-height: 1.45;
-      color: var(--ink-soft);
-      max-width: 38ch;
-    }
-
-    .masthead-aside {
-      border-left: 1px solid var(--rule);
-      padding-left: 1.5rem;
-      font-size: 0.92rem;
-      color: var(--ink-soft);
-    }
-    @media (max-width: 880px) {
-      .masthead-aside { border-left: 0; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 1.4rem; }
-    }
-    .masthead-aside dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 0.4rem 1.2rem; }
-    .masthead-aside dt {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-mid);
-      padding-top: 0.18rem;
-    }
-    .masthead-aside dd { margin: 0; }
-    .masthead-aside dd em { font-family: var(--serif); font-style: italic; }
-
-    /* ------- the meristem schematic ------- */
-    .schematic {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 0 var(--gutter);
-    }
-    .schematic-frame {
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      padding: 2.5rem 0;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      gap: 2rem;
-      align-items: center;
-    }
-    @media (max-width: 880px) {
-      .schematic-frame { grid-template-columns: 1fr; }
-    }
-    .schematic-text {
-      font-family: var(--serif);
-      font-style: italic;
-      font-weight: 300;
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--ink-soft);
-    }
-    .schematic svg { display: block; margin: 0 auto; }
-
-    /* ------- section heading ------- */
-    .section {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 5rem var(--gutter) 2rem;
-    }
-    .section-head {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      align-items: end;
-      gap: 1rem;
-      margin-bottom: 3rem;
-      border-bottom: 1px solid var(--ink);
-      padding-bottom: 1rem;
-    }
-    .section-head h2 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 96, "SOFT" 30;
-      font-size: clamp(1.8rem, 3.2vw, 2.6rem);
-      letter-spacing: -0.01em;
-      margin: 0;
-    }
-    .section-head .counter {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--green-mid);
-    }
-
-    /* ------- research axes ------- */
-    .axes {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-    @media (max-width: 880px) { .axes { grid-template-columns: 1fr; } }
-
-    .axis {
-      background: var(--paper);
-      padding: 2.4rem 2rem 2.2rem;
-      position: relative;
-      transition: background 0.3s;
-    }
-    .axis:hover { background: var(--paper-warm); }
-
-    .axis-num {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      color: var(--green-mid);
-      margin-bottom: 1.1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .axis-num::after {
-      content: "";
-      flex: 1;
-      height: 1px;
-      background: currentColor;
-      opacity: 0.35;
-    }
-    .axis h3 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 72, "SOFT" 50;
-      font-size: 1.55rem;
-      line-height: 1.15;
-      letter-spacing: -0.005em;
-      margin: 0 0 0.9rem;
-      color: var(--ink);
-    }
-    .axis h3 em {
-      font-style: italic;
-      color: var(--green-deep);
-    }
-    .axis p {
-      margin: 0 0 1.2rem;
-      font-size: 0.98rem;
-      color: var(--ink-soft);
-    }
-    .axis .keywords {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 1.4rem;
-    }
-    .axis .kw {
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      padding: 0.25rem 0.55rem;
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      color: var(--ink-soft);
-      background: transparent;
-    }
-    .axis .ref {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
-      color: var(--green-mid);
-      margin-top: 1.2rem;
-      padding-top: 0.9rem;
-      border-top: 1px dashed var(--rule);
-    }
-    .axis .ref strong { color: var(--ink); font-weight: 500; }
-    .axis .ref em { font-style: italic; }
-
-    /* axis colour accents */
-    .axis.a1::before, .axis.a2::before, .axis.a3::before, .axis.a4::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 3px;
-    }
-    .axis.a1::before { background: var(--magenta); }
-    .axis.a2::before { background: var(--green-deep); }
-    .axis.a3::before { background: var(--amber); }
-    .axis.a4::before { background: var(--green-mid); }
-
-    /* ------- approach strip ------- */
-    .approach {
-      background: var(--green-deep);
-      color: var(--paper);
-      margin-top: 5rem;
-    }
-    .approach-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 4rem var(--gutter);
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-      gap: 3rem;
-      align-items: start;
-    }
-    @media (max-width: 880px) { .approach-inner { grid-template-columns: 1fr; } }
-
-    .approach .eyebrow { color: var(--green-pale); }
-    .approach .eyebrow::before { background: var(--green-pale); }
-    .approach h2 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 96, "SOFT" 50;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      line-height: 1.1;
-      margin: 0;
-      color: var(--paper);
-    }
-    .approach h2 em { font-style: italic; color: var(--green-pale); }
-    .approach-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 1.6rem 2rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    @media (max-width: 560px) { .approach-list { grid-template-columns: 1fr; } }
-    .approach-list li {
-      border-top: 1px solid rgba(244,240,230,0.25);
-      padding-top: 0.7rem;
-    }
-    .approach-list .label {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-pale);
-      display: block;
-      margin-bottom: 0.25rem;
-    }
-    .approach-list .body {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      line-height: 1.4;
-      font-weight: 300;
-      color: var(--paper);
-    }
-
-    /* ------- model organism + tools ------- */
-    .organism {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 5rem var(--gutter);
-      display: grid;
-      grid-template-columns: minmax(0, 4fr) minmax(0, 6fr);
-      gap: clamp(2rem, 5vw, 5rem);
-      align-items: start;
-    }
-    @media (max-width: 880px) { .organism { grid-template-columns: 1fr; } }
-
-    .organism-figure {
-      border: 1px solid var(--rule);
-      padding: 1.5rem;
-      background: var(--paper-warm);
-    }
-    .organism-figure svg { width: 100%; height: auto; display: block; }
-    .organism-figure figcaption {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
-      color: var(--ink-soft);
-      margin-top: 1rem;
-      line-height: 1.45;
-    }
-    .organism h2 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-variation-settings: "opsz" 96, "SOFT" 50;
-      font-size: clamp(1.8rem, 3vw, 2.4rem);
-      line-height: 1.1;
-      margin: 0 0 1.2rem;
-    }
-    .organism h2 em { font-style: italic; color: var(--green-deep); }
-    .organism p {
-      color: var(--ink-soft);
-      max-width: 56ch;
-    }
-    .organism p + p { margin-top: 1rem; }
-
-    /* ------- selected papers ------- */
-    .papers {
-      background: var(--paper-warm);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-    }
-    .papers-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 5rem var(--gutter);
-    }
-    .papers-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 0;
-    }
-    .paper {
-      display: grid;
-      grid-template-columns: 110px 1fr auto;
-      gap: 2rem;
-      padding: 1.6rem 0;
-      border-top: 1px solid var(--rule);
-      align-items: baseline;
-    }
-    .paper:last-child { border-bottom: 1px solid var(--rule); }
-    @media (max-width: 720px) {
-      .paper { grid-template-columns: 1fr; gap: 0.4rem; padding: 1.4rem 0; }
-    }
-    .paper .yr {
-      font-family: var(--serif);
-      font-style: italic;
-      font-variation-settings: "opsz" 96;
-      font-size: 1.8rem;
-      color: var(--green-mid);
-      line-height: 1;
-    }
-    .paper .meta {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      line-height: 1.4;
-      color: var(--ink);
-    }
-    .paper .meta .authors {
-      font-family: var(--sans);
-      font-size: 0.84rem;
-      color: var(--ink-soft);
-      display: block;
-      margin-top: 0.3rem;
-    }
-    .paper .venue {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--magenta);
-      white-space: nowrap;
-      align-self: start;
-    }
-
-    /* ------- footer ------- */
-    footer {
-      background: var(--ink);
-      color: var(--paper);
-      margin-top: 0;
-    }
-    .footer-inner {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 3.5rem var(--gutter) 2rem;
-      display: grid;
-      grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr));
-      gap: 2.5rem;
-    }
-    @media (max-width: 720px) { .footer-inner { grid-template-columns: 1fr 1fr; } }
-    @media (max-width: 480px) { .footer-inner { grid-template-columns: 1fr; } }
-
-    footer .brand-block .brand {
-      color: var(--paper);
-      display: block;
-      font-size: 1.4rem;
-      margin-bottom: 0.6rem;
-    }
-    footer .brand-block p {
-      font-size: 0.88rem;
-      color: rgba(244,240,230,0.7);
-      max-width: 32ch;
-    }
-    footer h4 {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--green-pale);
-      margin: 0 0 0.9rem;
-      font-weight: 500;
-    }
-    footer ul { list-style: none; padding: 0; margin: 0; }
-    footer li { margin-bottom: 0.4rem; font-size: 0.92rem; }
-    footer a {
-      color: rgba(244,240,230,0.85);
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    footer a:hover { border-bottom-color: var(--green-pale); }
-    .footer-legal {
-      max-width: var(--maxw);
-      margin: 0 auto;
-      padding: 1rem var(--gutter) 2rem;
-      border-top: 1px solid rgba(244,240,230,0.15);
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
-      color: rgba(244,240,230,0.55);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    /* ------- entrance animation ------- */
-    @media (prefers-reduced-motion: no-preference) {
-      .reveal {
-        opacity: 0;
-        transform: translateY(12px);
-        animation: rise 0.9s cubic-bezier(.2,.7,.2,1) forwards;
-      }
-      .reveal-1 { animation-delay: 0.05s; }
-      .reveal-2 { animation-delay: 0.15s; }
-      .reveal-3 { animation-delay: 0.25s; }
-      .reveal-4 { animation-delay: 0.35s; }
-      .reveal-5 { animation-delay: 0.45s; }
-      @keyframes rise {
-        to { opacity: 1; transform: translateY(0); }
-      }
-    }
-
-    /* selection */
-    ::selection { background: var(--magenta); color: var(--paper); }
-
-    /* small-screen tightening */
-    @media (max-width: 560px) {
-      body { font-size: 16px; }
-      .section { padding-top: 3.5rem; }
-    }
-    */
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=11">
 </head>
 <body>
-
-  <!-- ============== TOP BAR ============== -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
-      <nav class="primary" id="primary-nav" aria-label="Primary">
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" class="brand-lockup" aria-label="Meristemania home"><img class="brand-mark" src="assets/brand/meristemania-mark.svg" alt=""><span class="wm">Meristem<span class="suf">ania</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
+      <nav class="primary" id="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="research.html" class="current">Research</a>
         <a href="people.html">People</a>
         <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
         <a href="join.html">Join us</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============== MASTHEAD ============== -->
-  <section class="masthead">
-    <div>
-      <div class="eyebrow reveal reveal-1">Research programme &mdash; Stem cell biology</div>
-      <h1 class="title reveal reveal-2">
-        How a handful of cells<br/>
-        builds an <em>entire plant</em>.
-      </h1>
-      <p class="lede reveal reveal-3">
-        Plants grow throughout their lives from small populations of stem cells held in shoot and root meristems. We work out how those populations are specified, maintained, and tuned &mdash; in space, in time, and in changing environments.
-      </p>
-    </div>
-    <aside class="masthead-aside reveal reveal-4">
-      <dl>
-        <dt>Model</dt><dd><em>Arabidopsis thaliana</em></dd>
-        <dt>Focus</dt><dd>Plant development and stem cell systems</dd>
-        <dt>Tools</dt><dd>Genetics &middot; live imaging &middot; multi-omics &middot; modelling</dd>
-        <dt>Host</dt><dd>Centre for Organismal Studies (COS), Heidelberg University</dd>
-        <dt>Cluster</dt><dd><a href="https://greenrobust.de" style="border-bottom:1px solid var(--magenta);" rel="noopener noreferrer" target="_blank">GreenRobust</a> &mdash; Cluster of Excellence</dd>
-      </dl>
-    </aside>
-  </section>
-
-  <!-- ============== SCHEMATIC STRIP ============== -->
-  <section class="schematic" aria-label="The shoot apical meristem">
-    <div class="schematic-frame" style="grid-template-columns: 1fr; gap: 2rem;">
-      <figure style="margin: 0;">
-        <img src="assets/img/sam-stem-cells.jpg"
-             alt="3D confocal rendering of an Arabidopsis shoot apical meristem with the WUSCHEL organising centre in green and CLV3-expressing stem cells in red at the apex."
-             style="width: 100%; max-width: 980px; margin: 0 auto; display: block; border: 1px solid var(--rule); background: #0a0a08;" />
-        <figcaption style="font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.06em; color: var(--ink-soft); margin-top: 0.7rem; text-align: center;">
-          Shoot apical meristem of <em>Arabidopsis</em> &middot; WUS organising centre (green), CLV3 stem cells (red).
-        </figcaption>
-      </figure>
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); max-width: 980px; margin: 0 auto;">
-        <p class="schematic-text" style="margin: 0;">
-          At the tip of every shoot, a self-organising niche of stem cells supplies the cells that will become stems, leaves and flowers &mdash; for the lifetime of the plant.
-        </p>
-        <p class="schematic-text" style="margin: 0;">
-          We dissect the regulatory logic of this niche &mdash; from single transcription factor&ndash;DNA contacts to whole-meristem dynamics &mdash; and ask what makes it robust.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @media (max-width: 720px) {
-      .schematic-frame > div[style*="grid-template-columns: 1fr 1fr"] {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  </style>
-
-  <!-- ============== AXES ============== -->
-  <section class="section" id="axes">
-    <div class="section-head">
-      <h2>Four lines of inquiry</h2>
-      <span class="counter">01 &mdash; 04</span>
-    </div>
-
-    <div class="axes">
-
-      <article class="axis a1">
-        <div class="axis-num">Axis 01 &mdash; transcriptional core</div>
-        <h3><em>WUSCHEL</em> and the architecture of the stem cell niche</h3>
-        <p>
-          The homeodomain transcription factor WUSCHEL is necessary and sufficient to specify stem cell identity in the shoot apex. We dissect WUS function mechanistically &mdash; mapping direct and indirect targets in a cell-type-resolved way, characterising the cofactors and chromatin states it depends on, and asking how a single short-range signal sustains a population of cells across decades of growth.
-        </p>
-        <div class="keywords">
-          <span class="kw">WUSCHEL</span><span class="kw">CLAVATA</span><span class="kw">protein movement</span><span class="kw">cis-regulation</span>
-        </div>
-        <p class="ref">
-          <strong>Foundational</strong> &middot; Lohmann <em>et al.</em>, <em>Cell</em> 2001 &middot; Leibfried <em>et al.</em>, <em>Nature</em> 2005 &middot; Busch <em>et al.</em>, <em>Dev Cell</em> 2010 &middot; Daum <em>et al.</em>, <em>PNAS</em> 2014 &middot; Fuchs <em>et al.</em>, <em>bioRxiv</em> 2024
-        </p>
-      </article>
-
-      <article class="axis a2">
-        <div class="axis-num">Axis 02 &mdash; context-dependent networks</div>
-        <h3>Decoding <em>context-dependent</em> genetic networks <em>in vivo</em></h3>
-        <p>
-          Which genetic activities are required in each cell of a developing tissue &mdash; and how does that requirement shift as the cell&rsquo;s state and environment change? Through the ERC Synergy project <strong>DECODE</strong>, with the labs of Boutros, Huber and Stegle, we combine tissue-targeted, conditional CRISPR/Cas9 perturbations with single-cell transcriptomics and live imaging in the <em>Arabidopsis</em> root tip and the <em>Drosophila</em> gut, then infer the direct, cell-state-specific networks that underwrite tissue robustness and plasticity.
-        </p>
-        <div class="keywords">
-          <span class="kw">conditional CRISPR</span><span class="kw">single-cell RNA-seq</span><span class="kw">gene&times;gene interactions</span><span class="kw">causal inference</span><span class="kw">network plasticity</span>
-        </div>
-        <p class="ref">
-          <strong>Foundational</strong> &middot; Gaillochet <em>et al.</em>, <em>eLife</em> 2017 &middot; Liu <em>et al.</em>, <em>Mol Plant</em> 2021 &middot; Zeng <em>et al.</em>, <em>Nat Commun</em> 2023 &middot; Grones <em>et al.</em>, <em>Plant Cell</em> 2024 &middot; Wang <em>et al.</em>, <em>Nature</em> 2025
-        </p>
-      </article>
-
-      <article class="axis a3">
-        <div class="axis-num">Axis 03 &mdash; hormonal integration</div>
-        <h3>Cytokinin, auxin and the <em>whole-plant</em> conversation</h3>
-        <p>
-          The stem cell niche does not act alone. Hormonal signals &mdash; chiefly cytokinin, auxin and jasmonate &mdash; couple meristem behaviour to the developmental, metabolic and defensive state of the whole plant. We map where these pathways intersect the WUS circuit and how their balance is integrated at transcription and at protein turnover, including the trade-off between growth and defence in the shoot apex.
-        </p>
-        <div class="keywords">
-          <span class="kw">cytokinin</span><span class="kw">auxin</span><span class="kw">jasmonate</span><span class="kw">growth vs. defence</span><span class="kw">signal integration</span>
-        </div>
-        <p class="ref">
-          <strong>Foundational</strong> &middot; Leibfried <em>et al.</em>, <em>Nature</em> 2005 &middot; Zhao <em>et al.</em>, <em>Nature</em> 2010 &middot; Schuster <em>et al.</em>, <em>Dev Cell</em> 2014 &middot; Gaillochet <em>et al.</em>, <em>eLife</em> 2017 &middot; Ma <em>et al.</em>, <em>Nat Commun</em> 2019 &middot; Fan <em>et al.</em>, <em>bioRxiv</em> 2026
-        </p>
-      </article>
-
-      <article class="axis a4">
-        <div class="axis-num">Axis 04 &mdash; environment, adaptation &amp; regeneration</div>
-        <h3>Sensing the world: <em>acclimation</em>, <em>regeneration</em> and <em>growth</em></h3>
-        <p>
-          Daylength, temperature, light and nutrients all modulate meristem activity. We ask how the niche senses environmental information, how it meets the metabolic hub of <strong>TOR-kinase</strong> signalling to set growth, and how short-term acclimation converges with long-term adaptation across natural <em>Arabidopsis</em> variation. The same dimensions govern <em>regeneration</em>: in <strong>RegenerateRobust</strong> (GreenRobust Cluster of Excellence, with the Marciniak-Czochra and Dagdas labs), we map how temperature and autophagy set its limits across <em>Marchantia</em>, <em>Arabidopsis</em> and <em>Brachypodium</em>.
-        </p>
-        <div class="keywords">
-          <span class="kw">temperature</span><span class="kw">light &amp; sugar signalling</span><span class="kw">natural variation</span><span class="kw">regeneration</span><span class="kw">autophagy</span><span class="kw">cross-species comparison</span>
-        </div>
-        <p class="ref">
-          <strong>Foundational</strong> &middot; Wigge <em>et al.</em>, <em>Science</em> 2005 &middot; Pfeiffer <em>et al.</em>, <em>eLife</em> 2016 &middot; Pfeiffer <em>et al.</em>, <em>Curr Opin Plant Biol</em> 2017 &middot; Janocha <em>et al.</em>, <em>bioRxiv</em> 2024 &middot; Baulies <em>et al.</em>, <em>Nat Plants</em> 2025
-        </p>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============== APPROACH ============== -->
-  <section class="approach">
-    <div class="approach-inner">
+  <section class="hero compact">
+    <div class="hero-in">
       <div>
-        <div class="eyebrow">Methods &amp; mindset</div>
-        <h2>An <em>integrated</em> programme &mdash; from base-pairs to whole plants.</h2>
+        <div class="eyebrow">Research programme — Stem Cell Biology</div>
+        <h1 class="head">How a handful of cells<br>builds an <em>entire plant</em>.</h1>
+        <p class="lede">Plants grow throughout their lives from small populations of stem cells held in shoot and root meristems. We work out how those populations are specified, maintained, and tuned — in space, in time, and in changing environments.</p>
       </div>
-      <ul class="approach-list">
-        <li>
-          <span class="label">Genetics</span>
-          <span class="body">Classical and CRISPR-based dissection of regulatory networks; GreenGate cloning for rapid, modular transgenesis.</span>
-        </li>
-        <li>
-          <span class="label">Genomics</span>
-          <span class="body">Bulk and single-cell/nucleus transcriptomics, conditional CRISPR/Cas9 perturbations, and spatial multi-omics across meristem and root cell types.</span>
-        </li>
-        <li>
-          <span class="label">Biochemistry</span>
-          <span class="body">Recombinant protein expression and purification; <em>in vitro</em> DNA-binding and protein&ndash;protein interaction studies; structural biology of WUSCHEL with the Sinning lab.</span>
-        </li>
-        <li>
-          <span class="label">Imaging</span>
-          <span class="body">Multi-angle live confocal imaging of the shoot apical meristem; fluorescent reporters of transcription, hormone signalling, and protein movement.</span>
-        </li>
-        <li>
-          <span class="label">Quantitative</span>
-          <span class="body">Mathematical modelling of stem cell regulation and AI/ML for cellular networks under perturbation, with the labs of Marciniak-Czochra, Velten and the DECODE partner labs (Boutros, Huber, Stegle).</span>
-        </li>
-        <li>
-          <span class="label">Tools &amp; community</span>
-          <span class="body"><strong>GreenGate</strong> modular cloning, multi-angle SAM <strong>live imaging</strong>, and <strong>stem cell reporter</strong> lines &mdash; developed in the lab and shared as plasmids, lines and protocols.</span>
-        </li>
-      </ul>
+      <aside class="hero-aside">
+        <dl>
+          <dt>Model</dt><dd><em>Arabidopsis thaliana</em></dd>
+          <dt>Focus</dt><dd>Plant development &amp; stem cell systems</dd>
+          <dt>Tools</dt><dd>Genetics · live imaging · multi-omics · modelling</dd>
+          <dt>Host</dt><dd>Centre for Organismal Studies (COS), Heidelberg University</dd>
+          <dt>Cluster</dt><dd><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> — Cluster of Excellence</dd>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <!-- ============== ORGANISM ============== -->
-  <section class="organism" style="grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);">
-    <figure class="organism-figure">
-      <img src="assets/img/overview-complete.jpg"
-           alt="Top row: three genetically identical Arabidopsis thaliana plants grown under different conditions — short day 23 °C, long day 23 °C, long day 17 °C. Bottom row: rosettes of genetically diverse Arabidopsis accessions grown under identical conditions." />
-      <figcaption>
-        <em>Arabidopsis thaliana</em> &mdash; <strong>top row:</strong> genetically identical plants grown under diverse conditions (short day 23&thinsp;&deg;C; long day 23&thinsp;&deg;C; long day 17&thinsp;&deg;C). <strong>Bottom row:</strong> genetically diverse accessions grown under identical conditions. Two faces of the same question: how does one genome read many environments, and how do many genomes meet one environment.
-      </figcaption>
+  <main class="wrap">
+    <figure class="strip">
+      <img src="assets/img/sam-stem-cells.jpg?v=3" alt="3D confocal rendering of an Arabidopsis shoot apical meristem with the WUSCHEL organising centre in green and CLV3-expressing stem cells in red at the apex.">
+      <figcaption>Shoot apical meristem of <em>Arabidopsis</em> · WUS organising centre (green), CLV3 stem cells (red).</figcaption>
     </figure>
 
-    <div>
-      <div class="eyebrow">Why <em>Arabidopsis</em></div>
-      <h2>A reference plant &mdash; and a <em>conceptual</em> system.</h2>
-      <p>
-        We use <em>Arabidopsis thaliana</em> for its unmatched experimental toolkit &mdash; dense genetic resources, fast transformation, a community-curated genome, and mature reporter and imaging systems. But the questions are not specific to one species: the principles that emerge allow conclusions about stem cell control across the tree of life.
-      </p>
+    <section class="section">
+      <p class="lead-p">At the tip of every shoot, a self-organising niche of stem cells supplies the cells that will become stems, leaves and flowers — for the lifetime of the plant. We dissect the regulatory logic of this niche, from single transcription factor&ndash;DNA contacts to whole-meristem dynamics, and ask what makes it robust. At its core lies a compact feedback circuit built around the homeodomain regulator WUSCHEL and the CLAVATA signalling system, which together hold the stem cell population at a stable size while continuously releasing daughter cells to the growing organs. We follow this circuit across scales — mapping the cofactors and chromatin states that WUSCHEL depends on, watching cells take fate decisions by live confocal imaging of the intact meristem, and tracing how hormonal and environmental inputs converge on the same small group of cells. By combining classical and CRISPR genetics, quantitative imaging, single-cell genomics and mathematical modelling, we aim to explain not only how the niche is specified and maintained, but how it stays reliable as the plant grows, reads its environment, and — when wounded — rebuilds what it has lost.</p>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Four major lines of inquiry</h2><span class="link">01 — 04</span></div>
+      <div class="cards">
+        <article class="cardx">
+          <p class="k">Axis 01 — transcriptional core</p>
+          <h3><em>WUSCHEL</em> and the architecture of the stem cell niche</h3>
+          <p>The homeodomain transcription factor WUSCHEL is necessary and sufficient to specify stem cell identity in the shoot apex. We dissect WUS function mechanistically — mapping direct and indirect targets in a cell-type-resolved way, characterising the cofactors and chromatin states it depends on, and asking how a single short-range signal sustains a population of cells across decades of growth.</p>
+          <div class="chips"><span class="chip">WUSCHEL</span><span class="chip">CLAVATA</span><span class="chip">protein movement</span><span class="chip">cis-regulation</span></div>
+          <p class="ref" style="margin-top:18px"><strong>Foundational publications</strong> · Lohmann <em>et al.</em>, <em>Cell</em> 2001 · Leibfried <em>et al.</em>, <em>Nature</em> 2005 · Busch <em>et al.</em>, <em>Dev Cell</em> 2010 · Daum <em>et al.</em>, <em>PNAS</em> 2014 · Fuchs <em>et al.</em>, <em>bioRxiv</em> 2024</p>
+        </article>
+        <article class="cardx">
+          <p class="k">Axis 02 — context-dependent networks</p>
+          <h3>Decoding <em>context-dependent</em> genetic networks <em>in vivo</em></h3>
+          <p>Which genetic activities are required in each cell of a developing tissue — and how does that requirement shift as the cell&rsquo;s state and environment change? Through the ERC Synergy project <strong>DECODE</strong>, with the labs of Boutros, Huber and Stegle, we combine tissue-targeted, conditional CRISPR/Cas9 perturbations with single-cell transcriptomics and live imaging in the <em>Arabidopsis</em> root tip and the <em>Drosophila</em> gut, then infer the direct, cell-state-specific networks that underwrite tissue robustness and plasticity.</p>
+          <div class="chips"><span class="chip">conditional CRISPR</span><span class="chip">single-cell RNA-seq</span><span class="chip">gene×gene interactions</span><span class="chip">causal inference</span><span class="chip">network plasticity</span></div>
+          <p class="ref" style="margin-top:18px"><strong>Foundational publications</strong> · Gaillochet <em>et al.</em>, <em>eLife</em> 2017 · Liu <em>et al.</em>, <em>Mol Plant</em> 2021 · Zeng <em>et al.</em>, <em>Nat Commun</em> 2023 · Grones <em>et al.</em>, <em>Plant Cell</em> 2024 · Wang <em>et al.</em>, <em>Nature</em> 2025</p>
+        </article>
+        <article class="cardx">
+          <p class="k">Axis 03 — hormonal integration</p>
+          <h3>Cytokinin, auxin and the <em>whole-plant</em> conversation</h3>
+          <p>The stem cell niche does not act alone. Hormonal signals — chiefly cytokinin, auxin and jasmonate — couple meristem behaviour to the developmental, metabolic and defensive state of the whole plant. We map where these pathways intersect the WUS circuit and how their balance is integrated at transcription and at protein turnover, including the trade-off between growth and defence in the shoot apex.</p>
+          <div class="chips"><span class="chip">cytokinin</span><span class="chip">auxin</span><span class="chip">jasmonate</span><span class="chip">growth vs. defence</span><span class="chip">signal integration</span></div>
+          <p class="ref" style="margin-top:18px"><strong>Foundational publications</strong> · Leibfried <em>et al.</em>, <em>Nature</em> 2005 · Zhao <em>et al.</em>, <em>Nature</em> 2010 · Schuster <em>et al.</em>, <em>Dev Cell</em> 2014 · Gaillochet <em>et al.</em>, <em>eLife</em> 2017 · Ma <em>et al.</em>, <em>Nat Commun</em> 2019 · Fan <em>et al.</em>, <em>bioRxiv</em> 2026</p>
+        </article>
+        <article class="cardx">
+          <p class="k">Axis 04 — environment, adaptation &amp; regeneration</p>
+          <h3>Sensing the world: <em>acclimation</em>, <em>regeneration</em> and <em>growth</em></h3>
+          <p>Daylength, temperature, light and nutrients all modulate meristem activity. We ask how the niche senses environmental information, how it meets the metabolic hub of <strong>TOR-kinase</strong> signalling to set growth, and how short-term acclimation converges with long-term adaptation across natural <em>Arabidopsis</em> variation. The same dimensions govern <em>regeneration</em>: in <strong>RegenerateRobust</strong> (GreenRobust Cluster of Excellence, with the Marciniak-Czochra and Dagdas labs), we map how temperature and autophagy set its limits across <em>Marchantia</em>, <em>Arabidopsis</em> and <em>Brachypodium</em>.</p>
+          <div class="chips"><span class="chip">temperature</span><span class="chip">light &amp; sugar signalling</span><span class="chip">natural variation</span><span class="chip">regeneration</span><span class="chip">autophagy</span><span class="chip">cross-species comparison</span></div>
+          <p class="ref" style="margin-top:18px"><strong>Foundational publications</strong> · Wigge <em>et al.</em>, <em>Science</em> 2005 · Pfeiffer <em>et al.</em>, <em>eLife</em> 2016 · Pfeiffer <em>et al.</em>, <em>Curr Opin Plant Biol</em> 2017 · Janocha <em>et al.</em>, <em>bioRxiv</em> 2024 · Baulies <em>et al.</em>, <em>Nat Plants</em> 2025</p>
+        </article>
+      </div>
+    </section>
+
+    <figure class="strip">
+      <img src="assets/img/sams.jpg" alt="Three-panel image of a shoot apical meristem: raw confocal signal, automated single-cell segmentation, and classification of the segmented meristem into central zone and surrounding organs.">
+      <figcaption>From image to model — confocal signal (left), automated single-cell segmentation (centre), and classification of the segmented shoot apical meristem into the central meristem (magenta) and surrounding organs (green).</figcaption>
+    </figure>
+
+    <section class="panel">
+      <div>
+        <div class="eyebrow">Methods &amp; mindset</div>
+        <h2>An <em>integrated</em> programme — from base-pairs to whole plants.</h2>
+      </div>
+      <ul class="panel-list">
+        <li><span class="label">Genetics</span><span class="body">Classical and CRISPR-based dissection of regulatory networks; GreenGate cloning for rapid, modular transgenesis.</span></li>
+        <li><span class="label">Genomics</span><span class="body">Bulk and single-cell/nucleus transcriptomics, conditional CRISPR/Cas9 perturbations, and spatial multi-omics across meristem and root cell types.</span></li>
+        <li><span class="label">Biochemistry</span><span class="body">Recombinant protein expression and purification; <em>in vitro</em> DNA-binding and protein&ndash;protein interaction studies; structural biology of WUSCHEL with the Sinning lab.</span></li>
+        <li><span class="label">Imaging</span><span class="body">Multi-angle live confocal imaging of the shoot apical meristem; fluorescent reporters of transcription, hormone signalling, and protein movement.</span></li>
+        <li><span class="label">Quantitative</span><span class="body">Mathematical modelling of stem cell regulation and AI/ML for cellular networks under perturbation, with the labs of Marciniak-Czochra, Velten and the DECODE partner labs (Boutros, Huber, Stegle).</span></li>
+        <li><span class="label">Tools &amp; community</span><span class="body"><strong>GreenGate</strong> modular cloning, multi-angle SAM <strong>live imaging</strong>, and <strong>stem cell reporter</strong> lines — developed in the lab and shared as plasmids, lines and protocols.</span></li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Why <em>Arabidopsis</em></h2></div>
+      <p class="lead-p">We use <em>Arabidopsis thaliana</em> for its unmatched experimental toolkit — dense genetic resources, fast transformation, a community-curated genome, and mature reporter and imaging systems. But the questions are not specific to one species: the principles that emerge allow conclusions about stem cell control across the tree of life.</p>
+    </section>
+
+    <section class="figure-wide">
+      <figure>
+        <img src="assets/img/overview-complete.jpg" alt="Top row: three genetically identical Arabidopsis thaliana plants grown under different conditions — short day 23 °C, long day 23 °C, long day 17 °C. Bottom row: rosettes of genetically diverse Arabidopsis accessions grown under identical conditions.">
+        <figcaption><em>Arabidopsis thaliana</em> — <strong>top row:</strong> genetically identical plants grown under diverse conditions (short day 23&thinsp;°C; long day 23&thinsp;°C; long day 17&thinsp;°C). <strong>Bottom row:</strong> genetically diverse accessions grown under identical conditions. Two faces of the same question: how does one genome read many environments, and how do many genomes meet one environment.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <section class="cta">
+    <div class="cta-in">
+      <h2>Want the details? <em>See the full publication record.</em></h2>
+      <a class="btn solid" href="publications.html">Publications →</a>
     </div>
   </section>
 
-
-  <!-- ============== FOOTER ============== -->
   <footer>
-    <div class="footer-inner">
-      <div class="brand-block">
-        <span class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></span>
-        <p>Plant stem cell biology &middot; Centre for Organismal Studies (COS), Heidelberg University &middot; part of the <a href="https://greenrobust.de" style="color:inherit;" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence &mdash; <em>Understanding Robustness in Plants from Molecules to Ecosystems</em>. Funded by DFG, ERC, and others.</p>
-      </div>
+    <div class="foot-in">
       <div>
-        <h4>Lab</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="join.html">Join us</a></li>
-        </ul>
+        <span class="wm">Meristem<span class="suf">ania</span></span>
+        <p>Stem cell biology · Centre for Organismal Studies (COS), Heidelberg University<br>Part of the <a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence — <em>Understanding Robustness in Plants from Molecules to Ecosystems</em><br>Funded by DFG, ERC, and others.</p>
       </div>
-      <div>
-        <h4>Institutional</h4>
-        <ul>
-          <li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li>
-          <li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li>
-          <li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li>
-          <li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li>
-          <li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li>
-          <li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><h4>Lab</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li><li><a href="news.html">News</a></li><li><a href="join.html">Join us</a></li></ul></div>
+      <div><h4>Institutional</h4><ul><li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li><li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li><li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li><li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li><li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li><li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-legal">
-      <span>&copy; <span id="yr">2026</span> Lohmann Lab &middot; Meristemania</span>
-      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> &middot; <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> &middot; <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Lohmann Lab · Meristemania</span>
+      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> · <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> · <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
     </div>
   </footer>
-
-  <script>
-    document.getElementById("yr").textContent = new Date().getFullYear();
-  </script>
-
+  <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>

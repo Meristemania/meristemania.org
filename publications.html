@@ -5,58 +5,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Publications &mdash; Lohmann Lab &middot; Meristemania</title>
   <meta name="description" content="Complete publication list of the Lohmann Lab at the Centre for Organismal Studies, Heidelberg University: research articles, reviews and methods papers from 1995 to the present." />
-
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/brand/meristemania-app-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=11">
 </head>
 <body>
-
-  <!-- ============== TOP BAR ============== -->
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a href="index.html" class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" onclick="var n=document.getElementById('primary-nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
-      <nav class="primary" id="primary-nav" aria-label="Primary">
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" class="brand-lockup" aria-label="Meristemania home"><img class="brand-mark" src="assets/brand/meristemania-mark.svg" alt=""><span class="wm">Meristem<span class="suf">ania</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
+      <nav class="primary" id="nav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
         <a href="people.html">People</a>
         <a href="publications.html" class="current">Publications</a>
+        <a href="news.html">News</a>
         <a href="join.html">Join us</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- ============== MASTHEAD ============== -->
-  <section class="masthead">
-    <div>
-      <div class="eyebrow reveal reveal-1">Publications &mdash; complete list</div>
-      <h1 class="title reveal reveal-2">
-        Three decades of work on<br/>
-        <em>plant stem cells.</em>
-      </h1>
-      <p class="lede reveal reveal-3">
-        Research articles, reviews and methods papers from the lab and its collaborators, in reverse chronological order. Preprints are flagged separately. The canonical bibliometric record lives on Google Scholar and ORCID.
-      </p>
+  <section class="hero compact">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow">Publications — complete list</div>
+        <h1 class="head">Three decades of work on<br><em>plant stem cells.</em></h1>
+        <p class="lede">Research articles, reviews and methods papers from the lab and its collaborators, in reverse chronological order. Preprints are flagged separately. The canonical bibliometric record lives on <a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a> and <a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a>.</p>
+        <div class="hero-stats">
+          <div class="s"><span class="v">18,058</span><span class="l">Citations</span></div>
+          <div class="s"><span class="v">54</span><span class="l">h-index</span></div>
+        </div>
+        <p class="hero-stats-src">Source: Google Scholar · July 2026</p>
+      </div>
+      <figure class="hero-fig">
+        <img src="assets/img/daum-cover.jpg" alt="Stem cell reporter in an inflorescence of Arabidopsis.">
+        <figcaption>Stem cell reporter in an inflorescence of <em>Arabidopsis</em>.</figcaption>
+      </figure>
     </div>
-    <aside class="masthead-aside reveal reveal-4">
-      <dl>
-        <dt>Scholar</dt><dd><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" style="border-bottom:1px solid var(--magenta);" rel="noopener noreferrer" target="_blank">Google Scholar profile</a></dd>
-        <dt>ORCID</dt><dd><a href="https://orcid.org/0000-0003-3667-187X" style="border-bottom:1px solid var(--magenta);" rel="noopener noreferrer" target="_blank">0000-0003-3667-187X</a></dd>
-      </dl>
-    </aside>
-  </section>
-
-  <!-- ============== STATS ============== -->
-  <section class="pubs-intro">
-    <dl class="pubs-stats">
-      <div class="stat"><dt>Citations</dt><dd>18,058</dd></div>
-      <div class="stat"><dt>h-index</dt><dd>54</dd></div>
-      <div class="stat"><dt>Source</dt><dd class="source">Google Scholar &middot; July 2026</dd></div>
-    </dl>
   </section>
 
   <!-- ============== FILTER ============== -->
@@ -67,6 +55,8 @@
     <button data-filter="review">Reviews &amp; chapters</button>
     <button data-filter="preprint">Preprints</button>
   </div>
+
+  <p class="pub-note">Every title links to the full text — journal version (DOI) or preprint.</p>
 
   <!-- ============== 2026 ============== -->
   <section class="year-group">
@@ -942,53 +932,24 @@
     </p>
   </section>
 
-  <!-- ============== FOOTER ============== -->
   <footer>
-    <div class="footer-inner">
-      <div class="brand-block">
-        <span class="brand"><b>Meristemania</b> &middot; <i>Lohmann Lab</i></span>
-        <p>Plant stem cell biology &middot; Centre for Organismal Studies (COS), Heidelberg University &middot; part of the <a href="https://greenrobust.de" style="color:inherit;" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence &mdash; <em>Understanding Robustness in Plants from Molecules to Ecosystems</em>. Funded by DFG, ERC, and others.</p>
-      </div>
+    <div class="foot-in">
       <div>
-        <h4>Lab</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="research.html">Research</a></li>
-          <li><a href="people.html">People</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="join.html">Join us</a></li>
-        </ul>
+        <span class="wm">Meristem<span class="suf">ania</span></span>
+        <p>Stem cell biology · Centre for Organismal Studies (COS), Heidelberg University<br>Part of the <a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence — <em>Understanding Robustness in Plants from Molecules to Ecosystems</em><br>Funded by DFG, ERC, and others.</p>
       </div>
-      <div>
-        <h4>Institutional</h4>
-        <ul>
-          <li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li>
-          <li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li>
-          <li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li>
-          <li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li>
-          <li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Elsewhere</h4>
-        <ul>
-          <li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li>
-          <li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li>
-          <li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+      <div><h4>Lab</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li><li><a href="news.html">News</a></li><li><a href="join.html">Join us</a></li></ul></div>
+      <div><h4>Institutional</h4><ul><li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li><li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li><li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li><li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li><li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li><li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li><li><a href="contact.html">Contact</a></li></ul></div>
     </div>
-    <div class="footer-legal">
-      <span>&copy; <span id="yr">2026</span> Lohmann Lab &middot; Meristemania</span>
-      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> &middot; <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> &middot; <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Lohmann Lab · Meristemania</span>
+      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> · <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> · <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
     </div>
   </footer>
 
   <script>
     document.getElementById("yr").textContent = new Date().getFullYear();
-
-    // Publication filter
     (function(){
       var buttons = document.querySelectorAll(".pub-filter button");
       var items   = document.querySelectorAll("li.pub");
@@ -1001,7 +962,6 @@
             if (filter === "all" || li.classList.contains(filter)) li.style.display = "";
             else li.style.display = "none";
           });
-          // Hide empty year groups
           document.querySelectorAll(".year-group").forEach(function(g){
             var visible = g.querySelectorAll("li.pub").length === 0 ||
                           Array.from(g.querySelectorAll("li.pub")).some(function(li){ return li.style.display !== "none"; });
