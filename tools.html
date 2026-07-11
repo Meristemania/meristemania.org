@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tools &mdash; Lohmann Lab &middot; Meristemania</title>
+  <meta name="description" content="Tools and resources developed in the Lohmann Lab at the Centre for Organismal Studies, Heidelberg University: the GreenGate modular cloning system and interactive single-cell RNA expression explorers for the Arabidopsis shoot and root." />
+  <link rel="icon" type="image/svg+xml" href="assets/brand/meristemania-app-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css?v=12">
+  <style>
+    .tool-thumb{position:relative;display:block;margin:22px 0 0;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.12);line-height:0;cursor:pointer}
+    .tool-thumb img{width:100%;height:auto;display:block;transition:transform .4s ease}
+    .tool-thumb:hover img{transform:scale(1.03)}
+    .tool-thumb-cue{position:absolute;right:10px;bottom:10px;background:#0f1115cc;color:#e6e8ec;font-size:12px;line-height:1;padding:7px 11px;border-radius:6px;letter-spacing:.02em;opacity:0;transform:translateY(4px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
+    .tool-thumb:hover .tool-thumb-cue,.tool-thumb:focus-visible .tool-thumb-cue{opacity:1;transform:translateY(0)}
+    .tool-thumb:focus-visible{outline:2px solid #4aa3ff;outline-offset:2px}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="top-in">
+      <a href="index.html" class="brand-lockup" aria-label="Meristemania home"><img class="brand-mark" src="assets/brand/meristemania-mark.svg" alt=""><span class="wm">Meristem<span class="suf">ania</span></span></a>
+      <button class="menu-toggle" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'));">Menu</button>
+      <nav class="primary" id="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="tools.html" class="current">Tools</a>
+        <a href="people.html">People</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="join.html">Join us</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero compact">
+    <div class="hero-in">
+      <div>
+        <div class="eyebrow">Resources &amp; Tools</div>
+        <h1 class="head">Tools we build &mdash;<br>and <em>share</em>.</h1>
+        <p class="lede">Method development is part of how we work. From the community-standard GreenGate cloning system to interactive explorers of single-cell expression data in shoot and root meristems.</p>
+      </div>
+      <aside class="hero-aside">
+        <dl>
+          <dt>Cloning</dt><dd>GreenGate modular system &amp; Addgene kit</dd>
+          <dt>Data</dt><dd>Single-cell RNA expression explorers</dd>
+          <dt>Access</dt><dd>Plasmids public · viewers lab-internal</dd>
+          <dt>Host</dt><dd>Centre for Organismal Studies (COS), Heidelberg University</dd>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <main class="wrap">
+
+    <section class="section">
+      <div class="section-head"><h2>GreenGate modular cloning</h2><span class="link">Open resource</span></div>
+      <p class="lead-p">GreenGate is a Golden&nbsp;Gate&ndash;based system for rapidly assembling plant transformation constructs. It uses a single type&nbsp;IIS restriction enzyme and just six classes of insert module &mdash; plant promoter, N&#8209;terminal tag, coding sequence, C&#8209;terminal tag, plant terminator and plant resistance cassette &mdash; and lets several expression cassettes be stacked into one binary destination vector from a library of pre-cloned building blocks. It is cheap, reliable, and now used by plant labs worldwide.</p>
+      <div class="cards">
+        <article class="cardx">
+          <p class="k">Reagents &mdash; Addgene</p>
+          <h3>The <em>Lohmann Lab</em> GreenGate kit</h3>
+          <p>The complete set of GreenGate entry and destination vectors is distributed as a kit through Addgene, with maps, sequences and documentation for every module. Request the plasmids directly for use in your own transformation pipeline.</p>
+          <div class="chips"><span class="chip">binary vectors</span><span class="chip">entry modules</span><span class="chip">Golden Gate</span><span class="chip">Arabidopsis</span></div>
+          <p style="margin-top:18px"><a class="btn solid" href="https://www.addgene.org/kits/lohmann-greengate/" rel="noopener noreferrer" target="_blank">GreenGate kit on Addgene &rarr;</a></p>
+        </article>
+        <article class="cardx">
+          <p class="k">Reference &mdash; how it works</p>
+          <h3>The GreenGate <em>publication</em></h3>
+          <p>The system, its module grammar and validated assembly protocols are described in full in the original open-access paper. Please cite it if you use GreenGate in your work.</p>
+          <p class="ref" style="margin-top:14px">Lampropoulos A, Sutikovic Z, Wenzl C, Maegele I, Lohmann JU, Forner J. <em>GreenGate &mdash; a novel, versatile, and efficient cloning system for plant transgenesis.</em> <strong>PLoS ONE</strong> 8(12):e83043 (2013).</p>
+          <p style="margin-top:14px"><a class="btn ghost" href="https://doi.org/10.1371/journal.pone.0083043" rel="noopener noreferrer" target="_blank">Read the paper (DOI) &rarr;</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>Single-cell expression explorers</h2><span class="link">Lab internal</span></div>
+      <p class="lead-p">To make our single-cell and single-nucleus transcriptome data explorable at the bench, we build interactive viewers that let you paint gene expression directly onto the tissue. These tools are currently provided for lab-internal use only and are protected by lab credentials.</p>
+      <div class="cards">
+        <article class="cardx">
+          <p class="k">Shoot apical meristem &mdash; ready</p>
+          <h3>3D SAM single-cell <em>expression explorer</em></h3>
+          <p>An interactive 3D viewer of a segmented <em>Arabidopsis</em> shoot apical meristem. Query any gene by symbol or AGI to paint its expression cell-by-cell across the reconstructed meristem, step through gene lists, and find genes with similar spatial patterns &mdash; with young and old primordia painted from their matched scRNA maturation stage. Segmented SAM by Christian Wenzl.</p>
+          <div class="chips"><span class="chip">shoot apical meristem</span><span class="chip">3D segmentation</span><span class="chip">scRNA-seq</span><span class="chip">gene painting</span><span class="chip">🔒 password protected</span></div>
+          <p style="margin-top:18px"><a class="btn solid" href="tools/sam-3d-explorer.html" target="_blank" rel="noopener">Launch 3D SAM explorer &rarr;</a></p>
+          <a class="tool-thumb" href="tools/sam-3d-explorer.html" target="_blank" rel="noopener" aria-label="Launch the 3D SAM explorer">
+            <img src="assets/img/sam-3d-explorer-preview.jpg" alt="Screenshot of the 3D SAM single-cell expression explorer: a segmented Arabidopsis shoot apical meristem rendered in 3D with cells coloured by scRNA-defined zone, shown in top-down and side views." loading="lazy">
+            <span class="tool-thumb-cue">Open explorer <span aria-hidden="true">&#8599;</span></span>
+          </a>
+        </article>
+      </div>
+      <p class="pub-note" style="margin-top:18px">Further explorers for the root and shoot are in preparation and will be added here as they are released.</p>
+    </section>
+
+  </main>
+
+  <section class="cta">
+    <div class="cta-in">
+      <h2>See how these tools feed the <em>science.</em></h2>
+      <a class="btn solid" href="research.html">Research programme &rarr;</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="foot-in">
+      <div>
+        <span class="wm">Meristem<span class="suf">ania</span></span>
+        <p>Stem cell biology · Centre for Organismal Studies (COS), Heidelberg University<br>Part of the <a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust</a> Cluster of Excellence — <em>Understanding Robustness in Plants from Molecules to Ecosystems</em><br>Funded by DFG, ERC, and others.</p>
+      </div>
+      <div><h4>Lab</h4><ul><li><a href="index.html">Home</a></li><li><a href="research.html">Research</a></li><li><a href="tools.html">Tools</a></li><li><a href="people.html">People</a></li><li><a href="publications.html">Publications</a></li><li><a href="news.html">News</a></li><li><a href="join.html">Join us</a></li></ul></div>
+      <div><h4>Institutional</h4><ul><li><a href="https://www.cos.uni-heidelberg.de/en" rel="noopener noreferrer" target="_blank">COS Heidelberg</a></li><li><a href="https://greenrobust.de" rel="noopener noreferrer" target="_blank">GreenRobust Cluster</a></li><li><a href="https://www.bio.uni-heidelberg.de" rel="noopener noreferrer" target="_blank">Faculty of Biosciences</a></li><li><a href="https://www.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">Heidelberg University</a></li><li><a href="http://www.hbigs.uni-heidelberg.de/" rel="noopener noreferrer" target="_blank">HBIGS graduate school</a></li></ul></div>
+      <div><h4>Elsewhere</h4><ul><li><a href="https://bsky.app/profile/meristemania.bsky.social" rel="noopener noreferrer" target="_blank">Bluesky</a></li><li><a href="https://scholar.google.com/citations?user=BkbnIxkAAAAJ" rel="noopener noreferrer" target="_blank">Google Scholar</a></li><li><a href="https://orcid.org/0000-0003-3667-187X" rel="noopener noreferrer" target="_blank">ORCID</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="legal">
+      <span>© <span id="yr">2026</span> Lohmann Lab · Meristemania</span>
+      <span><a href="https://www.uni-heidelberg.de/de/impressum" rel="noopener noreferrer" target="_blank">Imprint</a> · <a href="https://www.uni-heidelberg.de/de/datenschutzerklaerung" rel="noopener noreferrer" target="_blank">Privacy</a> · <a href="https://www.uni-heidelberg.de/de/barrierefreiheit" rel="noopener noreferrer" target="_blank">Accessibility</a></span>
+    </div>
+  </footer>
+  <script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
+</body>
+</html>
