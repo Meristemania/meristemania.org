@@ -11,12 +11,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css?v=12">
   <style>
-    .tool-thumb{position:relative;display:block;margin:22px 0 0;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.12);line-height:0;cursor:pointer}
-    .tool-thumb img{width:100%;height:auto;display:block;transition:transform .4s ease}
+    .tool-thumb{position:relative;display:block;margin:22px 0 0;border-radius:10px;overflow:hidden;border:1px solid rgba(0,0,0,.12);line-height:0;cursor:pointer;aspect-ratio:1600/1133;background:#0e1116}
+    .tool-thumb img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .4s ease}
     .tool-thumb:hover img{transform:scale(1.03)}
     .tool-thumb-cue{position:absolute;right:10px;bottom:10px;background:#0f1115cc;color:#e6e8ec;font-size:12px;line-height:1;padding:7px 11px;border-radius:6px;letter-spacing:.02em;opacity:0;transform:translateY(4px);transition:opacity .25s ease,transform .25s ease;pointer-events:none}
     .tool-thumb:hover .tool-thumb-cue,.tool-thumb:focus-visible .tool-thumb-cue{opacity:1;transform:translateY(0)}
     .tool-thumb:focus-visible{outline:2px solid #4aa3ff;outline-offset:2px}
+    .gg-cards{align-items:stretch}
+    .gg-cards .cardx{display:flex;flex-direction:column}
+    .gg-cards .cardx .card-cta{margin-top:auto}
+    .ex-cards .cardx{display:flex;flex-direction:column}
+    .ex-cards .cardx .tool-thumb{margin-top:auto}
   </style>
 </head>
 <body>
@@ -60,29 +65,23 @@
     <section class="section">
       <div class="section-head"><h2>GreenGate modular cloning</h2><span class="link">Open resource</span></div>
       <p class="lead-p">GreenGate is a Golden&nbsp;Gate&ndash;based system for rapidly assembling plant transformation constructs. It uses a single type&nbsp;IIS restriction enzyme and just six classes of insert module &mdash; plant promoter, N&#8209;terminal tag, coding sequence, C&#8209;terminal tag, plant terminator and plant resistance cassette &mdash; and lets several expression cassettes be stacked into one binary destination vector from a library of pre-cloned building blocks. It is cheap, reliable, and now used by plant labs worldwide.</p>
-      <div class="cards">
+      <div class="cards gg-cards">
         <article class="cardx">
-          <p class="k">Reagents &mdash; Addgene</p>
+          <p class="k">Original system &mdash; GreenGate</p>
           <h3>The <em>Lohmann Lab</em> GreenGate kit</h3>
-          <p>The complete set of GreenGate entry and destination vectors is distributed as a kit through Addgene, with maps, sequences and documentation for every module. Request the plasmids directly for use in your own transformation pipeline.</p>
-          <div class="chips"><span class="chip">binary vectors</span><span class="chip">entry modules</span><span class="chip">Golden Gate</span><span class="chip">Arabidopsis</span></div>
-          <p style="margin-top:18px"><a class="btn solid" href="https://www.addgene.org/kits/lohmann-greengate/" rel="noopener noreferrer" target="_blank">GreenGate kit on Addgene &rarr;</a></p>
-        </article>
-        <article class="cardx">
-          <p class="k">Reference &mdash; how it works</p>
-          <h3>The GreenGate <em>publication</em></h3>
-          <p>The system, its module grammar and validated assembly protocols are described in full in the original open-access paper. Please cite it if you use GreenGate in your work.</p>
-          <p class="ref" style="margin-top:14px">Lampropoulos A, Sutikovic Z, Wenzl C, Maegele I, Lohmann JU, Forner J. <em>GreenGate &mdash; a novel, versatile, and efficient cloning system for plant transgenesis.</em> <strong>PLoS ONE</strong> 8(12):e83043 (2013).</p>
-          <p style="margin-top:14px"><a class="btn ghost" href="https://doi.org/10.1371/journal.pone.0083043" rel="noopener noreferrer" target="_blank">Read the paper (DOI) &rarr;</a></p>
+          <p>The original modular system for rapid, cheap and reliable assembly of plant transformation constructs. The complete set of GreenGate entry and destination vectors is distributed as a kit through Addgene, with maps, sequences and documentation for every module &mdash; request the plasmids directly for use in your own transformation pipeline.</p>
+          <div class="chips"><span class="chip">binary vectors</span><span class="chip">entry modules</span><span class="chip">Golden Gate</span><span class="chip">plant transformation</span></div>
+          <p class="ref" style="margin-top:14px"><a href="https://doi.org/10.1371/journal.pone.0083043" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Lampropoulos A, Sutikovic Z, Wenzl C, Maegele I, Lohmann JU, Forner J. <em>GreenGate &mdash; a novel, versatile, and efficient cloning system for plant transgenesis.</em> <strong>PLoS ONE</strong> 8(12):e83043 (2013).</a></p>
+          <p class="card-cta" style="margin-top:14px"><a class="btn solid" href="https://www.addgene.org/kits/lohmann-greengate/" rel="noopener noreferrer" target="_blank">GreenGate kit on Addgene &rarr;</a></p>
         </article>
         <article class="cardx">
           <p class="k">Extension &mdash; GreenGate 2.0</p>
           <h3>The <em>Maizel lab</em> GreenGate&nbsp;2.0 addons</h3>
-          <p>An important, backwards-compatible extension developed by the neighbouring <a href="https://www.maizel-lab.org" rel="noopener noreferrer" target="_blank">Maizel lab</a> at COS Heidelberg. GreenGate&nbsp;2.0 adds one-pot entry-clone generation (a Universal Entry Generator, pUEG), up to twelve Level&nbsp;0 modules per transcriptional unit, the <strong>GreenBraid</strong> method for iterative stacking of multigene constructs, and ready-made modules for multiplex CRISPR/Cas9 guide RNAs and inducible or fluorescent markers &mdash; while remaining compatible with most existing GreenGate modules.</p>
-          <div class="chips"><span class="chip">backwards compatible</span><span class="chip">GreenBraid stacking</span><span class="chip">multiplex CRISPR</span><span class="chip">up to 12 modules</span></div>
-          <p class="ref" style="margin-top:14px">Piepers M, Erbstein K, Reyes-Hernandez J, Song C, Tessi T, Petrasiunaite V, Faerber N, Distel K, Maizel A. <em>GreenGate 2.0: backwards compatible addons for assembly of complex transcriptional units and their stacking with GreenGate.</em> <strong>PLoS ONE</strong> 18(9):e0290097 (2023).</p>
-          <p style="margin-top:14px"><a class="btn solid" href="https://www.addgene.org/kits/maizel-greengate2/" rel="noopener noreferrer" target="_blank">GreenGate 2.0 kit on Addgene &rarr;</a></p>
-          <p style="margin-top:10px;font-size:14px"><a href="https://doi.org/10.1371/journal.pone.0290097" rel="noopener noreferrer" target="_blank">Read the paper (DOI)</a> &middot; <a href="https://www.cos.uni-heidelberg.de/en/newsroom/greengate-20" rel="noopener noreferrer" target="_blank">COS newsroom</a></p>
+          <p>An important, backwards-compatible extension developed by the neighbouring <a href="https://www.cos.uni-heidelberg.de/en/research-groups/cell-and-developmental-biology" rel="noopener noreferrer" target="_blank">Maizel lab</a> at COS Heidelberg. GreenGate&nbsp;2.0 adds one-pot entry-clone generation (a Universal Entry Generator, pUEG), up to twelve Level&nbsp;0 modules per transcriptional unit, the <strong>GreenBraid</strong> method for iterative stacking of multigene constructs, and ready-made modules for inducible and fluorescent markers &mdash; while remaining compatible with most existing GreenGate modules.</p>
+          <p style="margin-top:8px;font-size:14px"><a href="https://www.cos.uni-heidelberg.de/en/newsroom/greengate-20" rel="noopener noreferrer" target="_blank">More &middot; COS newsroom &rarr;</a></p>
+          <div class="chips"><span class="chip">backwards compatible</span><span class="chip">GreenBraid stacking</span><span class="chip">up to 12 modules</span></div>
+          <p class="ref" style="margin-top:14px"><a href="https://doi.org/10.1371/journal.pone.0290097" rel="noopener noreferrer" target="_blank" style="color:inherit;text-decoration:underline;text-underline-offset:2px">Piepers M, Erbstein K, Reyes-Hernandez J, Song C, Tessi T, Petrasiunaite V, Faerber N, Distel K, Maizel A. <em>GreenGate 2.0: backwards compatible addons for assembly of complex transcriptional units and their stacking with GreenGate.</em> <strong>PLoS ONE</strong> 18(9):e0290097 (2023).</a></p>
+          <p class="card-cta" style="margin-top:14px"><a class="btn solid" href="https://www.addgene.org/kits/maizel-greengate2/" rel="noopener noreferrer" target="_blank">GreenGate 2.0 kit on Addgene &rarr;</a></p>
         </article>
       </div>
     </section>
@@ -90,13 +89,13 @@
     <section class="section">
       <div class="section-head"><h2>Single-cell expression explorers</h2><span class="link">Lab internal</span></div>
       <p class="lead-p">To make our single-cell and single-nucleus transcriptome data explorable at the bench, we build interactive viewers that let you paint gene expression directly onto the tissue. These tools are currently provided for lab-internal use only and are protected by lab credentials.</p>
-      <div class="cards">
+      <div class="cards ex-cards">
         <article class="cardx">
           <p class="k">Shoot apical meristem &mdash; ready</p>
           <h3>3D SAM single-cell <em>expression explorer</em></h3>
           <p>An interactive 3D viewer of a segmented <em>Arabidopsis</em> shoot apical meristem. Query any gene by symbol or AGI to paint its expression cell-by-cell across the reconstructed meristem, step through gene lists, and find genes with similar spatial patterns &mdash; with young and old primordia painted from their matched scRNA maturation stage. Segmented SAM by Christian Wenzl.</p>
           <div class="chips"><span class="chip">shoot apical meristem</span><span class="chip">3D segmentation</span><span class="chip">scRNA-seq</span><span class="chip">gene painting</span><span class="chip">🔒 password protected</span></div>
-          <p style="margin-top:18px"><a class="btn solid" href="tools/sam-3d-explorer.html" target="_blank" rel="noopener">Launch 3D SAM explorer &rarr;</a></p>
+          <p style="margin-top:18px;margin-bottom:22px"><a class="btn solid" href="tools/sam-3d-explorer.html" target="_blank" rel="noopener">Launch 3D SAM explorer &rarr;</a></p>
           <a class="tool-thumb" href="tools/sam-3d-explorer.html" target="_blank" rel="noopener" aria-label="Launch the 3D SAM explorer">
             <img src="assets/img/sam-3d-explorer-preview.jpg" alt="Screenshot of the 3D SAM single-cell expression explorer: a segmented Arabidopsis shoot apical meristem rendered in 3D with cells coloured by scRNA-defined zone, shown in top-down and side views." loading="lazy">
             <span class="tool-thumb-cue">Open explorer <span aria-hidden="true">&#8599;</span></span>
@@ -105,9 +104,9 @@
         <article class="cardx">
           <p class="k">Root tip &mdash; ready</p>
           <h3>2D root-tip single-cell <em>expression explorer</em></h3>
-          <p>An interactive 2D viewer of the <em>Arabidopsis</em> root tip. Query any gene by symbol or AGI to paint its expression across the cell types of the root &mdash; from the stem cell niche and columella through the meristematic and elongation zones &mdash; directly from single-cell RNA-seq.</p>
+          <p>An interactive 2D viewer of the <em>Arabidopsis</em> root tip. Query any gene by symbol or AGI to paint its expression across the cell types of the root &mdash; from the stem cell niche and columella through the meristematic and elongation zones &mdash; directly from single-cell RNA-seq. Select from seven independent datasets.</p>
           <div class="chips"><span class="chip">root tip</span><span class="chip">cell types</span><span class="chip">scRNA-seq</span><span class="chip">gene painting</span><span class="chip">🔒 password protected</span></div>
-          <p style="margin-top:18px"><a class="btn solid" href="tools/root-2d-explorer.html" target="_blank" rel="noopener">Launch 2D root explorer &rarr;</a></p>
+          <p style="margin-top:18px;margin-bottom:22px"><a class="btn solid" href="tools/root-2d-explorer.html" target="_blank" rel="noopener">Launch 2D root explorer &rarr;</a></p>
           <a class="tool-thumb" href="tools/root-2d-explorer.html" target="_blank" rel="noopener" aria-label="Launch the 2D root explorer">
             <img src="assets/img/root-2d-explorer-preview.jpg" alt="Screenshot of the 2D root-tip single-cell expression explorer: a longitudinal section of the Arabidopsis root tip with cells coloured by cell type, from root cap and columella through the QC and vascular tissues, with a cell-type legend." loading="lazy">
             <span class="tool-thumb-cue">Open explorer <span aria-hidden="true">&#8599;</span></span>
